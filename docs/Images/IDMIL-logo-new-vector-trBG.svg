@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="243.84" viewBox="0 0 1250 508">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-width: 41.667px;
+      }
+
+      .cls-2 {
+        font-size: 61.217px;
+        font-family: "Helvetica Neue";
+        font-weight: 500;
+      }
+
+      .cls-3 {
+        fill: #9c0010;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" width="1250" height="508"/>
+  <text id="IDMIL" class="cls-2" transform="translate(53.949 401.251) scale(6.811 6.806)">I<tspan class="cls-3">DMI</tspan>L</text>
+</svg>

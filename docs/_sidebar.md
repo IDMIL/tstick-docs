@@ -1,5 +1,6 @@
 - Getting Started
   - [T-Stick Home](README)
+  - [Contribution Guide](Contribution.md)
 - Technical Information
   - [Technical Requirements](Technical%20Requirements%20and%20Constraints.md)
   - [Design Guidelines](T-Stick%20Design%20Guidelines.md)
