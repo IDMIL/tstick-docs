@@ -82,7 +82,7 @@ To set the T-Stick info and test if the data is being send correctly:
  6. Open your browser and go to <http://TStick_XXX.local/> or <http://192.168.4.1>, where XXX is the ID of the T-Stick module. 
 
     \
-     ![T-Stick Setup Page](Images/network-page.png)
+     ![T-Stick Setup Page](./Images/network-page.png)
 
     \
  7. In the __Network__ section write the network name and password optained in Step 2 in the __SSID__ and __SSID Password__ fields.
