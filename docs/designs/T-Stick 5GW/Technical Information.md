@@ -6,6 +6,7 @@
 
 | Feature | Details |
 |----|----|
+| Status | In Development |
 | Communication Type | Wi-Fi, 802.11 b/g/n |
 | Compatible protocols | Open Sound Control (OSC)/Libmapper |
 | Touch Sensing Density | 1 channel per 1cm |

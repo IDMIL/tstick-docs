@@ -25,7 +25,7 @@ The Trill Craft board is kept as the capacitive sensor solution of choice. A mor
 
 Note: Section is still a Work in Progress
 
-Like the fourth generation T-Sticks this 5th generation of T-Sticks also includes embedded gestures. It also uses the Puara Gestures Library for gesture extraction. The table below lists all the properties that are extracted for the high-level gesture.
+Like the fourth generation T-Sticks this 5th generation of T-Sticks also includes embedded gestures. It also uses the Puara Gestures Library for gesture extraction. The table below lists all the properties that are extracted.
 
 ### Table 1: High Level Gestures
 

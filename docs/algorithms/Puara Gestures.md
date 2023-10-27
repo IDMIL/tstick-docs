@@ -2,6 +2,10 @@
 
 Note: Article still a Work in Progress
 
+## Read More
+- [Source Code](https://github.com/Puara/puara-gestures)
+- Documentation
+
 ## High-Level gesture vocabulary for the T-Stick
 
 Presented codes are arduino compatible.
@@ -9,6 +13,7 @@ Presented codes are arduino compatible.
 ### Summary:
 
 - [Puara Gestures](#puara-gestures)
+  - [Read More](#read-more)
   - [High-Level gesture vocabulary for the T-Stick](#high-level-gesture-vocabulary-for-the-t-stick)
     - [Summary:](#summary)
     - [Signal structures and global variables:](#signal-structures-and-global-variables)

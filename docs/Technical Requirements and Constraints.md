@@ -1,6 +1,6 @@
 # Technical Requirements and Constraints
 
-This page outline the technical requirements of the T-Stick as well as constraints inherited from previous designs. The goal is that with these technical requirements and constraints someone will be able to build a T-Stick that is functionally identical to the designs that have previously been built.
+This page outline the technical requirements of the T-Stick as well as constraints inherited from previous designs. The goal is that with these technical requirements and constraints someone will be able to build a T-Stick that is functionally similar to the designs that have previously been built.
 
 ## Verification Method table
 
@@ -125,7 +125,7 @@ Calibration is important, as it improves sensor accuracy and precision, artist s
 
 ### 4. Reliability and Maintainability
 
-As the name suggests this section contains all requirements relating to reliability and availability. This includes a PIR and PMR target for the T-Stick. We use the model defined in INSERTREFERENCEHERE for computing the PIR and PMR of the T-Stick. The robustness requirements are to ensure the T-Stick can handle elevated levels of shaking and jabbing for short periods of time without permanent failures.
+As the name suggests this section contains all requirements relating to reliability and availability. This includes a PIR and PMR target for the T-Stick. We use the model defined in the [Availability Modelling](./Availability%20Modelling.md) page for computing the PIR and PMR of the T-Stick. The robustness requirements are to ensure the T-Stick can handle elevated levels of shaking and jabbing for short periods of time without permanent failures.
 
 | **ID** | **Requirements** | **Verification Method (IADT)** |
 |----|----|----|
