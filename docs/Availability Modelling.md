@@ -46,7 +46,7 @@ The failure rates for several components such as:
 * ESP32 Board
 * Battery
 
-can be estimated using a combination of the [FIDES reliability prediction too](https://www.fides-reliability.org/)l, the [MIL-217F Handbook](https://drive.google.com/file/d/1QNUiTOAwJebwC-bk0FJWB0jD3I6XFxFi/view?usp=drive_link), the [NPRD-91](https://drive.google.com/file/d/1QPMqClW2nHY4U9tmMO5Lzc11RDF2Oeoc/view?usp=sharing), and manufacturer reliability data when available. The MTBF of the connectors is taken from the performance model.
+can be estimated using a combination of the [FIDES reliability prediction tool](https://www.fides-reliability.org/), the [MIL-217F Handbook](https://drive.google.com/file/d/1QNUiTOAwJebwC-bk0FJWB0jD3I6XFxFi/view?usp=drive_link), the [NPRD-91](https://drive.google.com/file/d/1QPMqClW2nHY4U9tmMO5Lzc11RDF2Oeoc/view?usp=sharing), and manufacturer reliability data when available. The MTBF of the connectors is taken from the performance model.
 
 We compute the MTBF of the t stick by taking the reciprocal of the failure rate.
 
