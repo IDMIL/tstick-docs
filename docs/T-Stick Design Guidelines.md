@@ -83,7 +83,7 @@ The T-Stick shall be able to measure or approximate the following properties:
 7. Brushes
 8. Rubs
 
-It is recommended to use a similar set of sensors and algorithms as previous [T-Stick designs](./../T-Stick%20Designs.md) to maintain similar behavior across T-Sticks. These properties should be able to meet the accuracy requirement (Requirement 3.2) outlined in [Technical Requirements and Constraints](./../Technical%20Requirements%20and%20Constraints.md). Additionally any sensor fusion and gestural extraction should be done in the T-Stick firmware.
+It is recommended to use a similar set of sensors and algorithms as previous [T-Stick designs](./T-Stick-functions.md) to maintain similar behavior across T-Sticks. These properties should be able to meet the accuracy requirement (Requirement 3.2) outlined in [Technical Requirements and Constraints](./Technical%20Requirements%20and%20Constraints.md). Additionally any sensor fusion and gestural extraction should be done in the T-Stick firmware.
 
 ## 4. Signal Namespace
 
