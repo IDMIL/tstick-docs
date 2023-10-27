@@ -90,7 +90,7 @@ It is recommended to use a similar set of sensors and algorithms as previous [T-
 If interoperability with previous T-Stick pieces is desired the following guidelines should be followed:
 
 
-1. The T-Stick should avoid using a different namespace than the ones presented in this Table.
-2. If you wish for the T-Stick to be able to play older pieces the firmware of the T-Stick should have a built in translation layer for signals. External translation layers can be used but are not desired.
+1. The T-Stick should use an existing namespace. Check [previous designs](./T-Stick-functions.md#previous-designs) for past and current namespaces.
+2. If you wish for the T-Stick to be able to play older pieces the T-Stick firmware should have a built in translation layer for signals. External translation layers can be used but are not desired.
 
 

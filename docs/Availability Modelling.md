@@ -103,7 +103,7 @@ $$
 
 Computing the Performance/Maintenance Ratio (PMR) is a matter of taking the $MTBF_{tstick}$ computed in the PIR model and dividing that by the average maintenance time.
 
-### Computing Average Maintenance time ($T_m$)
+### Computing Average Maintenance time
 
 To compute average maintenance time we consider the mean time to repair ($MTTR_c$) of each component and the failure rate of each component ($\lambda_c$). We can then take a weighted average of all the repair by taking into account each components contribution to the total failure rate.
 
