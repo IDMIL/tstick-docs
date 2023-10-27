@@ -1,8 +1,8 @@
 # Getting Started
 
-# Building a T-Stick 5GW
+## Building a T-Stick 5GW
 
-## Bill of Materials
+### Bill of Materials
 
 | Qty | Description |
 |----|----|
@@ -20,22 +20,22 @@
 | 11 | M3 Mounting Screws |
 | 01 | foam sheet |
 
-# Flashing Firmware for a T-Stick 5GW
+## Flashing Firmware for a T-Stick 5GW
 
-## Option 1: using .bin files and [esptool.py](http://esptool.py)
+### Option 1: using .bin files and [esptool.py](http://esptool.py)
 
 This method is easier/faster. It uses [esptool.py](https://github.com/espressif/esptool).
 
-### Download the bin files
+#### Download the bin files
 
 * Download the .bin files located at the bin folder
 
-### Download [esptool.py](https://github.com/espressif/esptool)
+#### Download [esptool.py](https://github.com/espressif/esptool)
 
 * Download the *[esptool.py](http://esptool.py)* from <https://github.com/espressif/esptool>. Use the `Download ZIP` option from Github
 * Unzip the *esptool-master.zip* file
 
-### Connect the T-Stick to the computer and check the USB port
+#### Connect the T-Stick to the computer and check the USB port
 
 * [Check the T-Stick (ESP32) port in your computer](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/establish-serial-connection.html):
   * For MacOS/Linux:
@@ -48,7 +48,7 @@ This method is easier/faster. It uses [esptool.py](https://github.com/espressif/
     * Check the list of identified COM ports in the [Windows Device Manager](https://support.microsoft.com/en-ca/help/4026149/windows-open-device-manager)
     * Plug the T-Stick (USB) and check the list of identified COM ports in the [Windows Device Manager](https://support.microsoft.com/en-ca/help/4026149/windows-open-device-manager) again. The T-Stick port should appear on the list. Anotate the T-Stick USB port, it should be something similar to `COM3` or `COM16`
 
-### Flash the firmware (.bin files)
+#### Flash the firmware (.bin files)
 
 * Use *Finder*, *Terminal*, or *File Explorer* to copy the contents of the [bin](https://../firmware/bin/) folder (you should copy 3 .bin files) to the *esptool-master* folder
 * Navigate to the *esptool-master* folder in *Terminal* or *Command Prompt*
@@ -60,11 +60,11 @@ To set the T-Stick info and test if the data is being send correctly:
 * Open the Pure Data (PD) or Max/MSP patch to receive T-Stick messages (they can be found [here](https://../Test_config/));
 * Start receive OSC messages according to the chosen patch.
 
-# Connecting to a T-Stick 5GW
+## Connecting to a T-Stick 5GW
 
-## Option 1: Wireless Connection
+### Option 1: Wireless Connection
 
-### Get your network details
+#### Get your network details
 
 
 1. Connect to the network you will be connecting the T-Stick to.
@@ -74,7 +74,7 @@ To set the T-Stick info and test if the data is being send correctly:
    * [Find your IP Address MacOS](https://discussions.apple.com/thread/253927735)
    * [Find your IP Address Linux](https://opensource.com/article/18/5/how-find-ip-address-linux)
 
-### Connect to the T-Stick
+#### Connect to the T-Stick
 
 
  4. Power on your T-Stick and wait until the boot sequence is complete. If your T-Stick does not have a Power switch press the button once and wait for the T-Stick to turn on.

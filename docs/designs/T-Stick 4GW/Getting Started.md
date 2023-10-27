@@ -1,8 +1,8 @@
 # Getting Started
 
-# Building a Sopranino T-Stick 4GW
+## Building a Sopranino T-Stick 4GW
 
-## Bill of Materials
+### Bill of Materials
 
 | Qty | Description |
 |----|----|
@@ -24,9 +24,9 @@
 | 11 | [M2 Mounting Screws](https://www.digikey.ca/product-detail/en/MPMS+002+0008+PH/H739-ND/274950/?itemSeq=307635387) |
 | 01 | [foam sheet](https://www.amazon.ca/Craft-Foam-Sheets-Assorted-Colours/dp/B005EQPRM6) |
 
-## Instructions
+### Instructions
 
-### Printing the Frame
+#### Printing the Frame
 
 Print one of each of the [3d printing files](https://../3D_printing/), but print 4 copies of the "regular poles". The beds (pieces that snap together) will need supports on the piece that snaps.
 
@@ -36,7 +36,7 @@ Print one of each of the [3d printing files](https://../3D_printing/), but print
 
 Snap the beds together as in the image above, snapping the regular poles between beds to secure them. Place copper strips on each arc in the beds, these will be used for capacitive touch sensing.
 
-### Soldering Components
+#### Soldering Components
 
 All the building tools can be found in the Machine Shop at the McGill Music Tech Department.
 
@@ -108,30 +108,30 @@ Insert the power switch into the other end cap. Solder the power wire of the bat
 
 Hooray, you built a T-Stick!
 
-## Document info
+### Document info
 
 Version 1.2: Brady Boettcher Version 1.1: Edu Meneses - eduardo.meneses@mail.mcgill.caVersion 1.0: Alex Nieva - alex.nieva@mail.mcgill.ca
 
 __Input Devices and Music Interaction Laboratory__ <http://www.idmil.org>Schulich School of MusicMcGill University550 Rue Sherbrooke Ouest, Suite 500Montreal, QC, H3A 1ECanada
 
-# Flashing Firmware for T-Stick 4GW
+## Flashing Firmware for T-Stick 4GW
 
 Sopranino T-Stick 4G - LOLIN D32 PRO / TinyPico - USB - WiFi Input Devices and Music Interaction Laboratory (IDMIL)
 
-## Option 1: using .bin files and [esptool.py](http://esptool.py)
+### Option 1: using .bin files and [esptool.py](http://esptool.py)
 
 This method is easier/faster. It uses [esptool.py](https://github.com/espressif/esptool).
 
-### Download the [bin files](../firmware/bin)
+#### Download the [bin files](../firmware/bin)
 
 * Download the .bin files located at the [bin folder](../firmware/bin)
 
-### Download [esptool.py](https://github.com/espressif/esptool)
+#### Download [esptool.py](https://github.com/espressif/esptool)
 
 * Download the *[esptool.py](http://esptool.py)* from <https://github.com/espressif/esptool>. Use the `Download ZIP` option from Github
 * Unzip the *esptool-master.zip* file
 
-### Connect the T-Stick to the computer and check the USB port
+#### Connect the T-Stick to the computer and check the USB port
 
 * [Check the T-Stick (ESP32) port in your computer](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/establish-serial-connection.html):
   * For MacOS/Linux:
@@ -144,7 +144,7 @@ This method is easier/faster. It uses [esptool.py](https://github.com/espressif/
     * Check the list of identified COM ports in the [Windows Device Manager](https://support.microsoft.com/en-ca/help/4026149/windows-open-device-manager)
     * Plug the T-Stick (USB) and check the list of identified COM ports in the [Windows Device Manager](https://support.microsoft.com/en-ca/help/4026149/windows-open-device-manager) again. The T-Stick port should appear on the list. Anotate the T-Stick USB port, it should be something similar to `COM3` or `COM16`
 
-### Flash the firmware (.bin files)
+#### Flash the firmware (.bin files)
 
 * Use *Finder*, *Terminal*, or *File Explorer* to copy the contents of the [bin](../firmware/bin/) folder (you should copy 3 .bin files) to the *esptool-master* folder
 * Navigate to the *esptool-master* folder in *Terminal* or *Command Prompt*
@@ -156,21 +156,21 @@ To set the T-Stick info and test if the data is being send correctly:
 * Open the Pure Data (PD) or Max/MSP patch to receive T-Stick messages (they can be found [here](../Test_config/));
 * Start receive OSC messages according to the chosen patch.
 
-## Option 2: Using PlatformIO
+### Option 2: Using PlatformIO
 
 *INSTALL ALL DEPENDENCIES AND REAL ALL OBSERVATIONS BEFORE UPLOAD !*
 
-### Install PlatformIO
+#### Install PlatformIO
 
 To download and install PlatformIO, follow the instructions at <https://platformio.org/platformio-ide>.
 
 We recomment using PlatformIO under Visual Studio Code, but you can also coose another editor.
 
-### Clone the T-Stick repository
+#### Clone the T-Stick repository
 
 Clone this repository using `git clone https://github.com/IDMIL/T-Stick.git`. Alternatively, you can download the repository as a zip file at <https://github.com/IDMIL/T-Stick>. Take note of the folder location.
 
-### Open firmware project and flash it to the T-Stick
+#### Open firmware project and flash it to the T-Stick
 
 * Open the T-Stick firmware project (folder **firmware** in the T-Stick repository folder) in VSC/PlatformIO. You can get help on how to use PlatformIO at <https://docs.platformio.org/en/latest/core/quickstart.html>
 * You can make any necessary changes on the firmware before flashing (e.g., changing T-Stick ID, selecting the board and capacitive board accordingly)
@@ -178,7 +178,7 @@ Clone this repository using `git clone https://github.com/IDMIL/T-Stick.git`. Al
 
 When ready, you need to flash both the firmware and the filesystem image. Choose the proper platform accordingly (*lolin_d32_pro* or *tinypico*) and use the PlatformIO menu to flash both images to the T-Stick.
 
-### Test T-Stick
+#### Test T-Stick
 
 After flashing, you can use the VSC/PlatformIO serial monitor to check if the T-Stick is booting properly. You should see T-Stick booting process.
 
@@ -194,11 +194,11 @@ To test if the data is being send correctly:
 * Open the Pure Data (PD) or Max/MSP patch to receive T-Stick messages (they can be found [here](./Configuration))
 * Start receive OSC messages according to the chosen patch
 
-# Connecting to a T-Stick 4GW
+## Connecting to a T-Stick 4GW
 
-## Option 1: Wireless Connection
+### Option 1: Wireless Connection
 
-### Get your network details
+#### Get your network details
 
 
 1. Connect to the network you will be connecting the T-Stick to.
@@ -208,7 +208,7 @@ To test if the data is being send correctly:
    * [Find your IP Address MacOS](https://discussions.apple.com/thread/253927735)
    * [Find your IP Address Linux](https://opensource.com/article/18/5/how-find-ip-address-linux)
 
-### Connect to the T-Stick
+#### Connect to the T-Stick
 
 
  4. Power on your T-Stick and wait until the boot sequence is complete. If your T-Stick does not have a Power switch press the button once and wait for the T-Stick to turn on.
@@ -222,7 +222,7 @@ To test if the data is being send correctly:
 10. Click __Config__ on the top of the page to return to the orginal menu.
 11. Click the green __Close and Reboot__ button at the bottom of the page.
 
-## Option 2: Puara Serial Manager
+### Option 2: Puara Serial Manager
 
 
 1. Download or clone the Puara client repository at <https://github.com/Puara/puara-client>. Instructions for how to clone github repositories can be found at the link below
@@ -235,7 +235,7 @@ To test if the data is being send correctly:
 7. Connect the T-Stick to your PC using a USB cable.
 8. The script should auto detect and configure the T-Stick. If the T-Stick is not being detected you may need to download the CP210x USB driver. A link can be found on [Esspressif's website](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/establish-serial-connection.html).
 
-## Guide info:
+### Guide info:
 
 Version 1.3: (2022/11/19) Albert-Ngabo Niyonsenga - albert-ngabo.niyonsenga@mail.mcgill.caVersion 1.2: (2020/03/20) Edu Meneses - eduardo.meneses@mail.mcgill.caVersion 1.11: (2019/11/27) Edu MenesesVersion 1.1: (2019/10/27) Edu MenesesVersion 1.0: (2019/08/28) Edu Meneses
 

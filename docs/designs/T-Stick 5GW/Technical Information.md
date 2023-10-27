@@ -1,8 +1,8 @@
 # Technical Information
 
-# Technical Details
+## Technical Details
 
-## Summary
+### Summary
 
 | Feature | Details |
 |----|----|
@@ -14,7 +14,7 @@
 | Embedded Gesture Libraries | Puara Gestures |
 | Sensors | ICM20948 IMU, Trill Craft Capacitive Sensing Board (30 channels), Force Sensitive Resistor, MAX17055 |
 
-## Detailed
+### Detailed
 
 | Feature | Detail |
 |----|----|
@@ -34,19 +34,19 @@
 | Practice Interruption Rate |    |
 | Practice/Maintenance Ratio |    |
 
-## Diagrams
+### Diagrams
 
  ![ESP32 Board Diagram](uploads/3beaeacb-7875-4267-b82a-cf15952f3e30/55507260-3901-49f6-891e-723b7da5a768/pcb_layout_components.png)
 
  ![Touch Board Diagram](uploads/3beaeacb-7875-4267-b82a-cf15952f3e30/e64dc1b2-dddd-4157-ab55-75b57fe26842/touch-board-schematic-view.png)
 
-## Schematic
+### Schematic
 
  ![Custom ESP32 Board Schematics](uploads/3beaeacb-7875-4267-b82a-cf15952f3e30/d26c1a30-41a1-4488-9e0c-c67d8ac1c3b6/tstick-5GW-schematic.png)
 
  ![Touch Board Schematic](uploads/3beaeacb-7875-4267-b82a-cf15952f3e30/d6efdb3d-c021-46f8-9f8d-c353fdd50d2f/tstick-touch-board-schematic.png)
 
-# OSC Signal Namespace
+## OSC Signal Namespace
 
 TBD
 

@@ -1,10 +1,10 @@
 # T-Stick Design Guidelines
 
-# Purpose
+## Purpose
 
 To improve interoperability between present and future T-Stick implementations.
 
-# 1. Identity Characteristics
+## 1. Identity Characteristics
 
 These features might be part of what makes an object identifiable as a T-Stick, and not some other instrument or object. These features are not normative, and serve more to introduce vocabulary that can be used in subsequent remarks.
 
@@ -17,13 +17,13 @@ These features might be part of what makes an object identifiable as a T-Stick, 
 6. The ends of the pipe are usually closed off with end caps which sometimes have buttons, lights, and/or switches embedded in them, as well as the serial bus connector on the proximal end.
 7. In addition to the pipe that makes up the main body of the instrument, a T-Stick often has an internal structure. Sensors may be attached to the pipe, the internal structure, the endcaps, or a combination of these parts.
 
-# 2. Hardware Standards
+## 2. Hardware Standards
 
 These remarks are meant to be normative. Adherence to these remarks is meant to improve interoperability between present and future T-Stick implementations.
 
 Many of the following standards are based on the dimensions of materials readily available in Canada where most T-Sticks are currently made. T-Stick builders in regions where available materials are sold with different base dimensions may wish to define local standards.
 
-## 2.1. Coordinate Systems
+### 2.1. Coordinate Systems
 
 The global coordinate system used in T-Stick implementations is a right-handed East-North-Up 3-dimensional orthogonal Cartesian coordinate system. The positive X axis points to the East. The positive Y axis points North. The positive Z axis points up.
 
@@ -33,11 +33,11 @@ The T-Stick-local coordinate system is used to give directions relative to the b
 
 The reference origin is centered in the circular cross-section of the pipe, with X = 0 defined such that the origin lies in the cutting plane that defines the proximal end of the pipe before end caps are attached. 
 
- ![T-Stick Coordinate System](uploads/3beaeacb-7875-4267-b82a-cf15952f3e30/70289f57-eca4-480f-bd53-48e93a60c4f0/image.png)
+ ![T-Stick Coordinate System](Images/t-stick-coordinate-system.png)
 
 Dimensions must given in millimeters (mm). Alternative representations in other units such as inches (in), feet (ft), centimeters (cm), or other units may be given *in addition* to the dimension in mm when convenient to aid comprehension.
 
-## 2.2. Consort Dimensions
+### 2.2. Consort Dimensions
 
 T-Sticks can be made in a variety of sizes, shown in table 1.
 
@@ -57,11 +57,11 @@ The base unit of length of a T-Stick is **304.8 mm (12 in, 1 ft)**. The differen
 | Bass | 1524.0 mm (60 in, 5 ft) |
 | Contrabass | 1828.8 mm (72 in, 6 ft) |
 
-## 2.3. Mounting Holes
+### 2.3. Mounting Holes
 
 Mounting holes on the PCB and internal structure shall be spaced **12.7 mm (½ in)** apart along the X axis, starting **6.35 mm (¼ in)** from the origin (i.e. from the proximal opening of the pipe). Adherence to this standard enables parts to be designed without strict coupling.
 
-## 2.4. PCBs
+### 2.4. PCBs
 
 If PCBs are used the following characteristics should be followed to improve interoperability between designs.
 
@@ -69,7 +69,7 @@ If PCBs are used the following characteristics should be followed to improve int
 1. PCBs shall not have dimension in the Y axis greater than **31.75 mm (1.25 in)**.
 2. The bottom surface of PCBs should not have any surface mount components or through hole component legs.
 
-# 3. Sensor Measurements
+## 3. Sensor Measurements
 
 The T-Stick shall be able to measure or approximate the following properties:
 
@@ -85,7 +85,7 @@ The T-Stick shall be able to measure or approximate the following properties:
 
 It is recommended to use a similar set of sensors and algorithms as previous [T-Stick designs](./../T-Stick%20Designs.md) to maintain similar behavior across T-Sticks. These properties should be able to meet the accuracy requirement (Requirement 3.2) outlined in [Technical Requirements and Constraints](./../Technical%20Requirements%20and%20Constraints.md). Additionally any sensor fusion and gestural extraction should be done in the T-Stick firmware.
 
-# 4. Signal Namespace
+## 4. Signal Namespace
 
 If interoperability with previous T-Stick pieces is desired the following guidelines should be followed:
 

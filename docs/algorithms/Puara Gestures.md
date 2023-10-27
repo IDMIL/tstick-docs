@@ -2,29 +2,33 @@
 
 Note: Article still a Work in Progress
 
-# High-Level gesture vocabulary for the T-Stick
+## High-Level gesture vocabulary for the T-Stick
 
 Presented codes are arduino compatible.
 
-## Summary:
+### Summary:
 
-* [Signal structures and global variables](#signal-structures-and-global-variables)
-* [functions](#functions)
-* [Instrument Data](#instrument)
-  * [Touch (instrument/touch/)](#instrumenttouch)
-    * [/instrument/touch/all (InstrumentData.touchAll)](#instrumenttouchall-InstrumentDatatouchAll)
-    * [/instrument/touch/body (InstrumentData.touchBody)](#instrumenttouchbody-InstrumentDatatouchBody)
-    * [/instrument/touch/middle (InstrumentData.touchMiddle)](#instrumenttouchmiddle-InstrumentDatatouchMiddle)
-    * [/instrument/touch/bottom (InstrumentData.touchBottom)](#instrumenttouchbottom-InstrumentDatatouchBottom)
-  * [Brush (instrument/brush/)](#instrumentbrush)
-    * [/instrument/brush/up, and /down](#instrumentbrushup-down)
-    * [/instrument/brush/amplitude (brush)](#instrumentbrushamplitude-brush)
-    * [/instrument/brush/energy (rub)](#instrumentbrushenergy-rub)
-  * [/instrument/amplitude  /roll /tilt](#instrumentamplitude-roll-tilt)
-  * [/instrument/shake /jerk](#instrumentshake-jerk)
-  * [/instrument/jab](#instrumentjab)
+- [Puara Gestures](#puara-gestures)
+  - [High-Level gesture vocabulary for the T-Stick](#high-level-gesture-vocabulary-for-the-t-stick)
+    - [Summary:](#summary)
+    - [Signal structures and global variables:](#signal-structures-and-global-variables)
+    - [functions](#functions)
+    - [/instrument](#instrument)
+      - [/instrument/touch/](#instrumenttouch)
+        - [/instrument/touch/all (InstrumentData.touchAll)](#instrumenttouchall-instrumentdatatouchall)
+        - [/instrument/touch/top (InstrumentData.touchTop)](#instrumenttouchtop-instrumentdatatouchtop)
+        - [/instrument/touch/body (InstrumentData.touchBody)](#instrumenttouchbody-instrumentdatatouchbody)
+        - [/instrument/touch/middle (InstrumentData.touchMiddle)](#instrumenttouchmiddle-instrumentdatatouchmiddle)
+        - [/instrument/touch/bottom (InstrumentData.touchBottom)](#instrumenttouchbottom-instrumentdatatouchbottom)
+      - [/instrument/brush](#instrumentbrush)
+        - [/instrument/brush/up /down](#instrumentbrushup-down)
+        - [/instrument/brush/amplitude (brush)](#instrumentbrushamplitude-brush)
+        - [/instrument/brush/energy (rub)](#instrumentbrushenergy-rub)
+        - [/instrument/amplitude /roll /tilt](#instrumentamplitude-roll-tilt)
+        - [/instrument/shake /jerk](#instrumentshake-jerk)
+        - [/instrument/jab (INCOMPLETE)](#instrumentjab-incomplete)
 
-## Signal structures and global variables:
+### Signal structures and global variables:
 
 ```
 byte touchByteSize = 2; // bytes necessary to represent all the stripes (1-bit per stripe) = 2 for the sopranino
@@ -91,7 +95,7 @@ struct InstrumentDataStruct { // initialized as InstrumentData
 };
 ```
 
-## functions
+### functions
 
 * Implement bit read/write function (not needed for arduino, bitRead and bitWrite function is already included):
 
@@ -159,11 +163,11 @@ float lowPassFilter (data,olddata,k) {
 }
 ```
 
-## /instrument
+### /instrument
 
-### /instrument/touch/
+#### /instrument/touch/
 
-#### /instrument/touch/all (InstrumentData.touchAll)
+##### /instrument/touch/all (InstrumentData.touchAll)
 
 * InstrumentData.touchAll: get the "amount of touch" normalized between 0 and 1
 
@@ -171,7 +175,7 @@ float lowPassFilter (data,olddata,k) {
 InstrumentData.touchAll = bitMean(RawData.touch, 0, touchSizeAll);
 ```
 
-#### /instrument/touch/top (InstrumentData.touchTop)
+##### /instrument/touch/top (InstrumentData.touchTop)
 
 * InstrumentData.touchTop: similar to /instrument/touch/all, but applied only to the "top" region of the capsense
 
@@ -179,7 +183,7 @@ InstrumentData.touchAll = bitMean(RawData.touch, 0, touchSizeAll);
 InstrumentData.touchTop = bitMean(RawData.touch, 0, touchSizeEdge);
 ```
 
-#### /instrument/touch/body (InstrumentData.touchBody)
+##### /instrument/touch/body (InstrumentData.touchBody)
 
 * InstrumentData.touchBody: similar to /instrument/touch/all, but applied only to the "body" region of the capsense
 
@@ -187,7 +191,7 @@ InstrumentData.touchTop = bitMean(RawData.touch, 0, touchSizeEdge);
 InstrumentData.touchBody = bitMean(RawData.touch, touchSizeEdge, touchSizeAll);
 ```
 
-#### /instrument/touch/middle (InstrumentData.touchMiddle)
+##### /instrument/touch/middle (InstrumentData.touchMiddle)
 
 * InstrumentData.touchMiddle: similar to /instrument/touch/middle, but applied only to the "middle" region of the capsense
 
@@ -195,7 +199,7 @@ InstrumentData.touchBody = bitMean(RawData.touch, touchSizeEdge, touchSizeAll);
 InstrumentData.touchMiddle = bitMean(RawData.touch, touchSizeEdge, (touchSizeAll - touchSizeEdge) );
 ```
 
-#### /instrument/touch/bottom (InstrumentData.touchBottom)
+##### /instrument/touch/bottom (InstrumentData.touchBottom)
 
 * InstrumentData.touchBottom: similar to /instrument/touch/all, but applied only to the "top" region of the capsense
 
@@ -203,9 +207,9 @@ InstrumentData.touchMiddle = bitMean(RawData.touch, touchSizeEdge, (touchSizeAll
 InstrumentData.touchBottom = bitMean(RawData.touch, (touchSizeAll - touchSizeEdge), touchSizeAll);
 ```
 
-### /instrument/brush
+#### /instrument/brush
 
-#### /instrument/brush/up /down
+##### /instrument/brush/up /down
 
 ```
 operation_up = (LastStateData.brushUp & RawData.touch)
@@ -223,13 +227,13 @@ For ( i = 0; i < number_of_touch; i++ ) {
 }
 ```
 
-#### /instrument/brush/amplitude (brush)
+##### /instrument/brush/amplitude (brush)
 
 ```
 InstrumentData.brushAmplitude = InstrumentData.brushDown - InstrumentData.brushUp
 ```
 
-#### /instrument/brush/energy (rub)
+##### /instrument/brush/energy (rub)
 
 ```
 if (InstrumentData.brushUp > InstrumentData.brushDown) {
@@ -240,7 +244,7 @@ else {
 }
 ```
 
-#### /instrument/amplitude /roll /tilt
+##### /instrument/amplitude /roll /tilt
 
 (range +/- 2 ?)
 
@@ -252,7 +256,7 @@ InstrumentData.roll = cartopolAngle + 3.14159
 InstrumentData.tilt = tan-1 ( ((RawData.accl[0] * 2) - 128) / cartopolAmplitude)
 ```
 
-#### /instrument/shake /jerk
+##### /instrument/shake /jerk
 
 ```
 // populating shakeArray each loop)
@@ -271,7 +275,7 @@ InstrumentData.shake = lowPassFilter(shakeAccum,LastStateData.shake,20);
 InstrumentData.jerk = shakeAccum - InstrumentData.shake;
 ```
 
-#### /instrument/jab (INCOMPLETE)
+##### /instrument/jab (INCOMPLETE)
 
 ```
 // populating jabArray each loop)

@@ -1,12 +1,12 @@
 # T-Stick 4GW
 
-# Introduction
+## Introduction
 
 The T-Stick 4GW was designed by Eduardo Meneses and Alex Nieva with the first revision being completed in 2018. This generation of T-Sticks is a Wi-Fi based system using Open Sound Control and later Libmapper for sending signals. It uses the ESP32 microcontroller for controlling the T-Stick. Multiple development boards such as the Lolin D32 and TinyPico have been used with this design. Although the design is modular and can in theory support T-Sticks up to the length of a Tenor T-Stick. Limitations due to how the T-Stick is constructed and firmware makes this design appropriate only for Sopranino and Soprano T-Sticks.
 
 Note that as the TinyPico is now discontinued it can be replaced with the TinyS3, but changes to the 3D skeleton may need to be done.
 
-# System Architecture
+## System Architecture
 
 The T-Stick can be split into four subsystems: a control system, power system, sensor system, and mapping system. The current architecture of the T-Stick 4GW is shown below.
 

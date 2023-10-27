@@ -1,60 +1,32 @@
 # Availability Modelling
 
-# Introduction
+## Introduction
 
 TBD
 
-# Model Parameters
+## Model Parameters
 
-## Performance Time ($$t_p$$)
-
-The average time a T-Stick performance lasts given in hours.
-
-## Performer Intensity ($$j_p$$)
-
-The intensity of the performance, rough indicator of the impact of a performance on the reliability of certain components.
-
-## Simulation Parameters
-
-These additional parameters may be used for simulation, when wanting to take into account technician availability. It is not used for PIR calculations for the T-Stick evaluation though.
-
-### Performance Frequency ($$p_f$$)
-
-The average amount of performances per month. It can be used along side ***maintenance time between performance***, and ***technician availability*** to compute the ***interruption percentage*.**
-
-### Technician Availability ($$A_{tech}$$)
-
-The average amount of hours a technician/luthier is available to fix any issues an artist can’t fix with their instrument per month.
-
-### Technician Turnaround ($$t_{tech}$$)
-
-The average amount of business days it takes for the technician/luthier to return the instrument to the artist/musician.
-
+| **Parameter**           | **Symbol** | **Description**                                                                                                                                                                                               |
+|-------------------------|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Performance Time        | $t_p$      | The average time a T-Stick performance lasts given in hours.                                                                                                                                                  |
+| Performance Intensity   | $j_p$      | The intensity of the performance, rough indicator of the impact of a performance on the reliability of certain components                                                                                     |
+| Performance Frequency   | $p_f$      | The average amount of performances per month. It can be used along side **maintenance time between performance**, and **technician availability** to compute the interruption percentage. **SIMULATION ONLY** |
+| Technician Availability | $A_{tech}$ | The average amount of hours a technician/luthier is available to fix any issues an artist can’t fix with their instrument per month. **SIMULATION ONLY**                                                      |
+| Technician Turnaround   | $t_{tech}$ | The average amount of business days it takes for the technician/luthier to return the instrument to the artist/musician. **SIMULATION ONLY**                        
+                                          |
 ## Model Inputs
 
-### Maintenance Time between performances ($$t_m$$)
+| **Inputs**                               | **Symbol** | **Description**                                                                                               |
+|------------------------------------------|------------|---------------------------------------------------------------------------------------------------------------|
+| Maintenance Time between performances    | $t_m$      | The amount of time an artist/musician spends maintaining the T-Stick in between performances, given in hours. |
+| MTTR for T-Stick Components              | $MTTR_c$   | Mean time to repair/replace for T-Stick components in hours.                                                  |
+| MTTF for T-Stick Components              | $MTTF_c$   | Mean time between failure of T-Stick components in hours.                                                     |
+| Maintenance actions between performances | $MA$       | The actions the artist/musicians take when maintaining their instrument.                                      |
+| Available tools                          | $T$        | The available equipment an artist has on hand for maintaining and fixing their instrument.                    |
 
-The amount of time an artist/musician spends maintaining the T-Stick in between performances, given in hours.
+## Compute Practice Interruption Rate (PIR)
 
-### Mean time to repair for T-Stick Components ($$MTTR_c$$)
-
-Mean time to repair/replace for T-Stick components in hours
-
-### Mean time between failure for T-Stick Components ($$MTBF_c$$)
-
-Mean time between failure of T-Stick components in hours
-
-### Maintenance actions between performance
-
-The actions the artist/musicians take when maintaining their instrument.
-
-### Available tools (T)
-
-The available equipment an artist has on hand for maintaining and fixing their instrument.
-
-# Compute Practice Interruption Rate (PIR)
-
-## 1. Computing MTBF and failure rate of T-Stick
+### 1. Computing MTBF and failure rate of T-Stick
 
 To compute the Practice interruption rate we must first compute the failure rate of the T-Stick ($$ \lambda_{tstick}$$). We do this by adding the failure rate of each component.
 
@@ -85,7 +57,7 @@ MTBF_{tstick} = \frac{1}{\lambda_{tstick}}
 \end{equation}
 $$$
 
-## 3. Compute Mean Performances between failure (MPBF)
+### 3. Compute Mean Performances between failure (MPBF)
 
 We can then compute the mean performances between failure ($$MTBF_{tstick}$$) by dividing the $$MTBF_{tstick}$$ by the **performance time (**$$t_P$$)
 
@@ -95,7 +67,7 @@ MPBF = \frac{MTBF_{tstick}}{t_p}
 \end{equation}
 $$$
 
-## 4. Compute PIR
+### 4. Compute PIR
 
 We calculate the practice interruption rate by taking the reciprocal of $$MPBF$$.
 
@@ -128,11 +100,11 @@ $$$
 \text{average performance time} \times \text{failure rate of the t-stick}
 $$$
 
-# Compute Performance/Maintenance Ratio (PMR)
+## Compute Performance/Maintenance Ratio (PMR)
 
 Computing the Performance/Maintenance Ratio (PMR) is a matter of taking the $$MTBF_{tstick}$$ computed in the PIR model and dividing that by the average maintenance time.
 
-## Computing Average Maintenance time ($$T_m$$)
+### Computing Average Maintenance time ($$T_m$$)
 
 To compute average maintenance time we consider the mean time to repair ($$MTTR_c$$) of each component and the failure rate of each component ($$\lambda_c$$). We can then take a weighted average of all the repair by taking into account each components contribution to the total failure rate.
 
@@ -142,7 +114,7 @@ T_m =  \sum_{c=0}^n \frac{\lambda_c}{\lambda_{tstick}}(MTTR_c)
 \end{equation}
 $$$
 
-## Compute PMR
+### Compute PMR
 
 To compute PMR we divide the $$MTBF_{tstick}$$ by the average maintenance time ($$T_m$$).
 
@@ -152,11 +124,11 @@ PMR = \frac{MTBF_{tstick}}{T_m}
 \end{equation}
 $$$
 
-# Compute Direct Maintenance Costs (DMC)
+## Compute Direct Maintenance Costs (DMC)
 
 We can also look at the direct maintenance cost of the T-Stick which we define as the dollars spent on maintaining the T-Stick per performance hour.
 
-## Compute Mean Repair Cost of the T Stick
+### Compute Mean Repair Cost of the T Stick
 
 The mean repair cost of the T-Stick ($$MRC_{tstick}$$) is computed the same way the average maintenance time, by using a weighted average of the mean repair cost of each component.
 
@@ -166,7 +138,7 @@ MRC_{tstick} = \sum_{c=0}^n \frac{\lambda_c}{\lambda_{tstick}}(MRC_c)
 \end{equation}
 $$$
 
-## Compute DMC
+### Compute DMC
 
 To compute DMC we divide the mean repair cost by the mean time between failure of the T-Stick ($$MTBF_{tstick}$$)
 
