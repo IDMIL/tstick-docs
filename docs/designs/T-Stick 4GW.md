@@ -11,7 +11,7 @@ Note that as the TinyPico is now discontinued it can be replaced with the TinyS3
 The T-Stick can be split into four subsystems: a control system, power system, sensor system, and mapping system. The current architecture of the T-Stick 4GW is shown below.
 
 
- ![T-Stick 4GW System Architecture](uploads/3beaeacb-7875-4267-b82a-cf15952f3e30/9cff436b-2a8a-41e3-af45-2f272963ca74/fourtehgen-systemarchitecture.png)
+ ![T-Stick 4GW System Architecture](Images/fourtehgen-systemarchitecture.png)
 
 The control system interprets the outputs of the sensor system, identifies gestures, and manages the power state of the T-Stick (on/sleep/off). The power system delivers power to the rest of the subsystems as well as handling the charging and discharging of batteries. The sensor system handles the input of the user as well as basic signal processing. The raw and processed signals are sent to the control system to be interpreted. The mapping system handles the T-Stick’s connections with external devices. This is handled by either libmapper or OSC. The system handles sending and receiving signals.
 

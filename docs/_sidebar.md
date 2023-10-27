@@ -1,2 +1,12 @@
-- [Read Me](README)
-- [Example Second Page](second-page)
+- Getting Started
+  - [T-Stick Home](README)
+- Technical Information
+  - [Technical Requirements](Technical%20Requirements%20and%20Constraints.md)
+  - [Design Guidelines](T-Stick%20Design%20Guidelines.md)
+  - [T-Stick Functions](T-Stick-functions.md)
+  - [Availability Modelling](Availability%20Modelling.md)
+- Previous Designs
+  - [T-Stick 4GW](./designs/T-Stick%204GW.md)
+  - [T-Stick 5GW](./designs/T-Stick%205GW.md)
+- Gesture Algorithms
+  - [Puara](./algorithms/Puara%20Gestures.md)
