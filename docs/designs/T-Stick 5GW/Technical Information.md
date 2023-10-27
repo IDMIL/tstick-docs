@@ -12,7 +12,7 @@
 | Touch Sensing Density | 1 channel per 1cm |
 | Microcontroller | ESP32-S3 Series |
 | Gestures Embedded? | Yes |
-| Embedded Gesture Libraries | Puara Gestures |
+| Embedded Gesture Libraries | [Puara Gestures](../../algorithms/Puara%20Gestures.md) |
 | Sensors | ICM20948 IMU, Trill Craft Capacitive Sensing Board (30 channels), Force Sensitive Resistor 408 Series, MAX17055 Fuel Gauge |
 
 ### Detailed
