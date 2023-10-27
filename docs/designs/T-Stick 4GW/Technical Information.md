@@ -1,8 +1,8 @@
 # Technical Information
 
-# Technical Details
+## Technical Details
 
-## Summary
+### Summary
 
 | Feature | Details |
 |----|----|
@@ -14,7 +14,7 @@
 | Embedded Gestures Libraries | Puara Gestures |
 | Sensors | LSM9DS1 IMU, Trill Craft Capacitive Sensing Board (30 channels), Force Sensitive Resistor 408 Series |
 
-## Detailed
+### Detailed
 
 | Feature | Detail |
 |----|----|
@@ -34,17 +34,17 @@
 | Practice Interruption Rate |    |
 | Practice/Maintenance Ratio |    |
 
-## Diagrams
+### Diagrams
 
-## Schematic
+### Schematic
 
-# OSC Signal Namespace
+## OSC Signal Namespace
 
-## firmware 220916
+### firmware 220916
 
-#### (Replace XXX for the T-Stick ID number)
+**Replace XXX for the T-Stick ID number**
 
-## Raw data
+#### Raw data
 
 /TStick_XXX/raw/capsense, i..., 0--255, ... (1 int per 8 capacitive stripes -- 8 bits)
 
@@ -56,7 +56,7 @@
 
 /TStick_XXX/raw/magn, iii, +/-0.001 (floats)
 
-## Instrument data
+#### Instrument data
 
 /TStick_XXX/instrument/button/count, i, 0--i
 

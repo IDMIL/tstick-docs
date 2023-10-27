@@ -82,13 +82,13 @@ To set the T-Stick info and test if the data is being send correctly:
  6. Open your browser and go to <http://TStick_XXX.local/> or <http://192.168.4.1>, where XXX is the ID of the T-Stick module. 
 
     \
-     ![T-Stick Setup Page](uploads/3beaeacb-7875-4267-b82a-cf15952f3e30/cb84832a-b46c-4839-b3c7-f71fec0797ad/image.png) ![](https://images/TStick_setupv13.png "T-Stick wifi setup page")
+     ![T-Stick Setup Page](Images/network-page.png)
 
     \
  7. In the __Network__ section write the network name and password optained in Step 2 in the __SSID__ and __SSID Password__ fields.
  8. In the __OSC send settings__ put in your computer's IP address optained in Step 3 in the __Primary IP__ field.
  9. Click the green __Save__ button. You will be directed to a page saying that the information was saved successfully.
-10. Click __Config__ on the top of the page to return to the orginal menu.
-11. Click the green __Close and Reboot__ button at the bottom of the page.
+1.  Click __Config__ on the top of the page to return to the orginal menu.
+2.  Click the green __Close and Reboot__ button at the bottom of the page.
 
 
