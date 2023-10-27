@@ -32,9 +32,9 @@
 
       // Table of contents
       toc: {
-        scope: '.markdown-section',
-        headings: 'h1, h2',
-        title: 'Table of Contents',
+        tocMaxLevel: 3,
+        target: 'h1, h2, h3',
+        ignoreHeaders:  ['<!-- {docsify-ignore} -->', '<!-- {docsify-ignore-all} -->']
       },
 
       // Search Plugin Configuration
@@ -49,12 +49,12 @@
 
   <!-- Required -->
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css">
+  <link rel="stylesheet" href="https://unpkg.com/docsify-plugin-toc@1.3.1/dist/light.css">
 
   <!-- Recommended -->
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
-  <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
+  <script src="https://unpkg.com/docsify-plugin-toc@1.3.1/dist/docsify-plugin-toc.min.js"></script>
 
 </body>
 </html>
