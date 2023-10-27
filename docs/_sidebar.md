@@ -7,6 +7,10 @@
   - [Availability Modelling](Availability%20Modelling.md)
 - Previous Designs
   - [T-Stick 4GW](./designs/T-Stick%204GW.md)
+    - [User Guide](./designs/T-Stick%204GW/Getting%20Started.md)
+    - [Technical Informations](./designs/T-Stick%204GW/Technical%20Information.md)
   - [T-Stick 5GW](./designs/T-Stick%205GW.md)
+    - [User Guide](./designs/T-Stick%205GW/Getting%20Started.md)
+    - [Technical Informations](./designs/T-Stick%205GW/Technical%20Information.md)
 - Gesture Algorithms
   - [Puara](./algorithms/Puara%20Gestures.md)
