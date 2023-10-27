@@ -11,11 +11,11 @@ The T-Stick 5GW consists of a custom ESP32 board which integrates a ESP32-S3 WRO
   * [T-Stick Implementation](https://enchantedinstruments.com/page-sygin-t_stick)
   * [ESP32 Button](https://enchantedinstruments.com/page-sygse-button.html)
   * [Trill Craft Implementation](https://enchantedinstruments.com/page-sygsa-trill_craft)
-  * ICM20948 Implementation
+  * [ICM20948 Implementation](https://enchantedinstruments.com/page-sygsp-icm20948.html)
 
 ## System Architecture
 
-Figure 1 shows the hardware architecture for the new T-Stick design. Most of the power sytem functions such as providing power, charging the instrument and changing the power state is handled by the MCP73871. This IC handles charging the LiPO/Li-ion battery and changing between the USB power and battery power depending on voltage. In addition, two regulators, the NCP167AMX330TBG/NCP167AMX1800TBG series are used to step down the system power to 3.3V and 1.8V respectively. The MAX17055 is used as a fuel gauge. As mentioned previously this fuel gauge is used over its non-current sensing counter parts due to better accuracy.
+The image below shows the hardware architecture for the new T-Stick design. Most of the power sytem functions such as providing power, charging the instrument and changing the power state is handled by the MCP73871. This IC handles charging the LiPO/Li-ion battery and changing between the USB power and battery power depending on voltage. In addition, two regulators, the NCP167AMX330TBG/NCP167AMX1800TBG series are used to step down the system power to 3.3V and 1.8V respectively. The MAX17055 is used as a fuel gauge. This fuel gauge is used over its non-current sensing counter parts such as the MAX17048 due to better accuracy.
 
  ![Figure 1: T-Stick 5GW Architecture](Images/TStick-HardwareArchitecture-Pro.png)
 
