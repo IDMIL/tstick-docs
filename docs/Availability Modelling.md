@@ -25,7 +25,7 @@ TBD
 
 ## Compute Practice Interruption Rate (PIR)
 
-### 1. Computing MTBF and failure rate of T-Stick
+### Computing MTBF and failure rate of T-Stick
 
 To compute the Practice interruption rate we must first compute the failure rate of the T-Stick ($ \lambda_{tstick}$). We do this by adding the failure rate of each component.
 
@@ -56,7 +56,7 @@ MTBF_{tstick} = \frac{1}{\lambda_{tstick}}
 \end{equation}
 $$
 
-### 3. Compute Mean Performances between failure (MPBF)
+### Compute Mean Performances between failure (MPBF)
 
 We can then compute the mean performances between failure ($MTBF_{tstick}$) by dividing the $MTBF_{tstick}$ by the performance time ($t_P$)
 
@@ -66,7 +66,7 @@ MPBF = \frac{MTBF_{tstick}}{t_p}
 \end{equation}
 $$
 
-### 4. Compute PIR
+### Compute PIR
 
 We calculate the practice interruption rate by taking the reciprocal of $MPBF$.
 
