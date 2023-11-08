@@ -41,13 +41,13 @@
 
 ## OSC Signal Namespace
 
-### firmware 220916
+### firmware 231031
 
 **Replace XXX for the T-Stick ID number**
 
 #### Raw data
 
-/TStick_XXX/raw/capsense, i..., 0--255, ... (1 int per 8 capacitive stripes -- 8 bits)
+/TStick_XXX/raw/capsense, i..., 0--4095,
 
 /TStick_XXX/raw/fsr, i, 0--4095
 
@@ -67,9 +67,17 @@
 
 /TStick_XXX/instrument/button/ttap, i, 0 or 1
 
+/TStick_XXX/instrument/squeeze, f, 0--1
+
 /TStick_XXX/orientation, ffff, ?, ? ,? ,?
 
 /TStick_XXX/instrument/ypr, fff, +/-180, +/-90 ,+/-180 (degrees)
+
+/TStick_XXX/instrument/touch/discrete, i, i..., 0 or 1
+
+/TStick_XXX/instrument/touch/normalised, i, i..., 0--100
+
+/TStick_XXX/instrument/touch/all, f, 0--1
 
 /TStick_XXX/instrument/touch/all, f, 0--1
 
@@ -91,4 +99,6 @@
 
 /TStick_XXX/instrument/jabxyz, fff, 0--?
 
-/TStick_XXX/battery
+/TStick_XXX/battery/percentage, f, 0--100
+
+/TStick_XXX/battery/voltage, f, 0--?

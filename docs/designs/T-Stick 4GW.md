@@ -32,18 +32,12 @@ The fourth generation T-Sticks are the first T-Sticks to include embedded gestur
 | /instrument/touch/frame/position | integer | 0 | Number of touch sensors - 1 | Position of frame start from bottom |
 | /instrument/touch/frame/size | integer | 0 | Number of touch sensors - 2 | Size of frame |
 | /instrument/touch/frame/touch\[N\] | integer | 0 | 1 | Touch values within frame |
-| /instrument/brush/up | float | 0 | 1 | Distance traveled during brush up |
-| /instrument/brush/down | float | 0 | 1 | Distance traveled during brush down |
-| /instrument/brush/amplitude | float | 0 | 1 | Amplitude of brush |
-| /instrument/brush/energy | float | 0 | 1 | Brush energy |
-| /instrument/orientation/yaw | float | -1 | 1 | Yaw |
-| /instrument/orientation/pitch | float | -1 | 1 | Pitch |
-| /instrument/orientation/roll | float | -1 | 1 | Roll |
-| /instrument/shake | float | 0 | 1 | TBD |
-| /instrument/jerk | float | 0 | 1 | TBD |
-| /instrument/thrust/x | float | -1 | 1 | Thrust/jab gesture magnitude |
-| /instrument/thrust/y | float | -1 | 1 | Thrust/jab gesture magnitude |
-| /instrument/thrust/z | float | -1 | 1 | Thrust/jab gesture magnitude |
+| /instrument/brush | float | 0 | 1 | Distance traveled during brush up |
+| /instrument/multibrush | float | 0 | 1 | Distance traveled during brush down |
+| /instrument/orientation | float [3] | -1 | 1 | Quaternion Data |
+| /instrument/ypr | float [4] | -1 | 1 | Yaw, pitch, roll|
+| /instrument/shakexyz | float | 0 | 1 | TBD |
+| /instrument/jabxyz | float | -1 | 1 | Thrust/jab gesture magnitude |
 | /instrument/squeez | float | 0 | 1 | Same as pressure for now |
 | /instrument/rest | float | 0 | 1 | High when interaction activity is low |
 | /instrument/effort | float | 0 | 1 | High when interaction activity is high |
