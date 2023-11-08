@@ -23,7 +23,7 @@ Control and Communication System of the T-Stick is the set of hardware and softw
 |----|----|----|
 | **1** | **Control System** |    |
 | 1.1 | The control rate of the system should be at least 1000HZ and will be no slower than 200Hz. | Test |
-| 1.2 | Continuous signals should have a wireless signal rate of at least 100Hz and will be no slower than 50Hz. | Test/Analysis |
+| 1.2 | Continuous signals will have a wireless signal rate of at least 100Hz. | Test/Analysis |
 | 1.3 | Wireless Signal Latency will be below 10ms. | Test/Analysis |
 | 1.4 | Wireless Signal Jitter will be below 2ms. | Test/Analysis |
 | 1.5 | The communication system will send any errors experienced by other subsystems to the user. | Demonstration |
@@ -31,13 +31,13 @@ Control and Communication System of the T-Stick is the set of hardware and softw
 | 1.5.2 | The communication system will send errors experienced by the power system to the user, excluding errors that cause a complete power delivery failure. | Demonstration |
 | 1.5.3 | The communication system will send errors experienced by the control and communication system to the user. | Demonstration |
 
-#### 1.1: The control rate of the system should be at least 1000HZ and will be no slower than 200Hz..
+#### 1.1: The control rate of the system should be at least 1000HZ and will be no slower than 200Hz.
 
 1000Hz allows responsive control of the T-Stick.
 
-#### 1.2: Continuous signals should have a wireless signal rate of at least **100Hz** and will be no slower than 50Hz.
+#### 1.2: Continuous signals will have a wireless signal rate of at least 100Hz.
 
-INSERTJUSTIFICATIONHERE
+Wireless signal rates below 100Hz are not desired. Slow wireless rates have lead to poor and inconsistent performance when paired with libmapper.
 
 #### 1.3: Wireless Signal Latency will be below 10ms.
 
@@ -45,7 +45,7 @@ Wireless latency for signals need to be below 10ms for continuous signals to hav
 
 #### 1.4: Wireless Signal Jitter will be below 2ms.
 
-Jitter should be reasonably low for a consistent wireless speed.
+Jitter should be reasonably low for a reliable and robust wireless performance.
 
 #### 1.5: The communication system will send any errors experienced by other subsystems to the user
 
@@ -168,9 +168,9 @@ The manufacturability Requirements are all the requirements related to the manuf
 | 5.6 | The final assembly and repair of the T-Stick will be possible using only a soldering iron, wire stripper/cutter, heat gun, saw, and hex key. | Demonstration |
 | 5.7 | The T-Stick will use common readily available parts and materials. | Demonstration |
 
-#### 5.1: The T-Stick will follow the design guidelines and requirements outlined in Sections 1 and 2 of the [T-Stick Design Guidelines](./Technical%20Requirements%20and%20Constraints/T-Stick%20Design%20Guidelines.md).
+#### 5.1: The T-Stick will follow the design guidelines and requirements outlined in Sections 1 and 2 of the [ T-Stick Design Guidelines](./Technical%20Requirements%20and%20Constraints/T-Stick%20Design%20Guidelines.md).
 
-standardisation of design…
+Sections 1 and 2 of the T-Stick design guidelines outline the physical constraints that make up the T-Stick. If new designers which to make T-Sticks these should be followed to maximise playability of older pieces. Note that due to the rapid changes in the hardware space and firmware changes to the T-Stick it may not be possible to design a T-Stick that is identical to a previous design.
 
 #### 5.2: The physical design documentation will include a bill of materials.
 
