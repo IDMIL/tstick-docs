@@ -1,8 +1,6 @@
 # Availability Modelling
 
-## Introduction
-
-TBD
+This page discusses the availability model used to analyse the availability of the T-Stick.
 
 ## Model Parameters
 
@@ -25,7 +23,7 @@ TBD
 
 ## Compute Practice Interruption Rate (PIR)
 
-### Computing MTBF and failure rate of T-Stick
+#### Computing MTBF and failure rate of T-Stick
 
 To compute the Practice interruption rate we must first compute the failure rate of the T-Stick ($ \lambda_{tstick}$). We do this by adding the failure rate of each component.
 
@@ -56,7 +54,7 @@ MTBF_{tstick} = \frac{1}{\lambda_{tstick}}
 \end{equation}
 $$
 
-### Compute Mean Performances between failure (MPBF)
+#### Compute Mean Performances between failure (MPBF)
 
 We can then compute the mean performances between failure ($MTBF_{tstick}$) by dividing the $MTBF_{tstick}$ by the performance time ($t_P$)
 
@@ -66,7 +64,7 @@ MPBF = \frac{MTBF_{tstick}}{t_p}
 \end{equation}
 $$
 
-### Compute PIR
+#### Compute PIR
 
 We calculate the practice interruption rate by taking the reciprocal of $MPBF$.
 
@@ -103,7 +101,7 @@ $$
 
 Computing the Performance/Maintenance Ratio (PMR) is a matter of taking the $MTBF_{tstick}$ computed in the PIR model and dividing that by the average maintenance time.
 
-### Computing Average Maintenance time
+#### Computing Average Maintenance time
 
 To compute average maintenance time we consider the mean time to repair ($MTTR_c$) of each component and the failure rate of each component ($\lambda_c$). We can then take a weighted average of all the repair by taking into account each components contribution to the total failure rate.
 
@@ -113,7 +111,7 @@ T_m =  \sum_{c=0}^n \frac{\lambda_c}{\lambda_{tstick}}(MTTR_c)
 \end{equation}
 $$
 
-### Compute PMR
+#### Compute PMR
 
 To compute PMR we divide the $MTBF_{tstick}$ by the average maintenance time ($T_m$).
 
@@ -127,7 +125,7 @@ $$
 
 We can also look at the direct maintenance cost of the T-Stick which we define as the dollars spent on maintaining the T-Stick per performance hour.
 
-### Compute Mean Repair Cost of the T Stick
+#### Compute Mean Repair Cost of the T Stick
 
 The mean repair cost of the T-Stick ($MRC_{tstick}$) is computed the same way the average maintenance time, by using a weighted average of the mean repair cost of each component.
 
@@ -137,7 +135,7 @@ MRC_{tstick} = \sum_{c=0}^n \frac{\lambda_c}{\lambda_{tstick}}(MRC_c)
 \end{equation}
 $$
 
-### Compute DMC
+#### Compute DMC
 
 To compute DMC we divide the mean repair cost by the mean time between failure of the T-Stick ($MTBF_{tstick}$)
 
