@@ -97,11 +97,11 @@ The Sensor System of the T-Stick manages the initialization, communication, and 
 | 3.4 | The sensor system will be able to identify sensors that are not communicating. | Demonstration |
 | 3.5 | The sensor system will continue operating regardless of the states of the sensors | Test |
 | 3.6 | The sensor system will have a calibration mode which enables artist to manually calibrate the sensors. | Demonstration/Test |
-| 3.7 | The sensor system will be able to measure or approximate the following properties listed in Section 3 of the [T-Stick Design Guidelines](./Technical%20Requirements%20and%20Constraints/T-Stick%20Design%20Guidelines.md). | Demonstration |
+| 3.7 | The sensor system will be able to measure or approximate the following properties listed in Section 3 of the [T-Stick Design Guidelines](./T-Stick%20Design%20Guidelines.md). | Demonstration |
 
 #### 3.1: The sensor system will have a polling rate of at least 1000Hz.
 
-The sensor system needs have a high polling rate of the sensors to allow for fast controls on the T-Stick. See the [control and communication system requirement](./../5th%20Generation%20T-Stick%20Design%20Docs%20%5BARCHIVE%5D/Requirements%20Analysis/Control%20and%20Communication%20System%20Requirements.md).
+The sensor system needs have a high polling rate of the sensors to allow for fast controls on the T-Stick. See the [control and communication system requirement](#1-control-and-communication-system).
 
 #### 3.2: The sensor system will have an average error of less than **1%.**
 
