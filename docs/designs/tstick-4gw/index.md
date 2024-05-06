@@ -1,4 +1,16 @@
-# Technical Information
+# T-Stick 4GW
+
+## Introduction
+
+The T-Stick 4GW was designed by Eduardo Meneses and Alex Nieva with the first revision being completed in 2018. This generation of T-Sticks is a Wi-Fi based system using Open Sound Control and later Libmapper for sending signals. It uses the ESP32 microcontroller for controlling the T-Stick. Multiple development boards such as the Lolin D32 and TinyPico have been used with this design. Although the design is modular and can in theory support T-Sticks up to the length of a Tenor T-Stick. Limitations due to how the T-Stick is constructed and firmware makes this design appropriate only for Sopranino and Soprano T-Sticks.
+
+Note that as the TinyPico is now discontinued it can be replaced with the TinyS3, but changes to the 3D skeleton may need to be done.
+
+## System Architecture
+
+The T-Stick can be split into four subsystems: a control system, power system, sensor system, and mapping system.
+
+The control system interprets the outputs of the sensor system, identifies gestures, and manages the power state of the T-Stick (on/sleep/off). The power system delivers power to the rest of the subsystems as well as handling the charging and discharging of batteries. The sensor system handles the input of the user as well as basic signal processing. The raw and processed signals are sent to the control system to be interpreted. The mapping system handles the T-Stick’s connections with external devices. This is handled by either libmapper or OSC. The system handles sending and receiving signals.
 
 ## Technical Details
 
@@ -12,32 +24,9 @@
 | Touch Sensing Density | 1 channel per 2cm |
 | Microcontroller | ESP32 Series |
 | Gestures Embedded? | Yes |
-| Embedded Gestures Libraries | [Puara Gestures](../../algorithms/Puara%20Gestures.md) |
+| Embedded Gestures Libraries | [Puara Gestures](../../engineering/gestures.md) |
 | Sensors | LSM9DS1 IMU, Trill Craft Capacitive Sensing Board (30 channels), Force Sensitive Resistor 408 Series |
 
-### Detailed
-
-| Feature | Detail |
-|----|----|
-| Control Loop Frequency |    |
-| Wireless Latency |    |
-| Battery Life |    |
-| State of Charge Accuracy |    |
-| Battery Voltage Accuracy |    |
-| Average Sensor Latency |    |
-| LSM9DS1 Latency |    |
-| Trill Craft Latency |    |
-| FSR 408 Latency |    |
-| Average Sensor Accuracy |    |
-| LSM9DS1 Accuracy |    |
-| Trill Craft Accuracy |    |
-| FSR 408 Accuracy |    |
-| Practice Interruption Rate |    |
-| Practice/Maintenance Ratio |    |
-
-### Diagrams
-
-### Schematic
 
 ## OSC Signal Namespace
 

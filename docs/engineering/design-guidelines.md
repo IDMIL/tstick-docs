@@ -33,7 +33,7 @@ The T-Stick-local coordinate system is used to give directions relative to the b
 
 The reference origin is centered in the circular cross-section of the pipe, with X = 0 defined such that the origin lies in the cutting plane that defines the proximal end of the pipe before end caps are attached. 
 
- ![T-Stick Coordinate System](Images/t-stick-coordinate-system.png)
+ ![T-Stick Coordinate System](../Images/t-stick-coordinate-system.png)
 
 Dimensions must given in millimeters (mm). Alternative representations in other units such as inches (in), feet (ft), centimeters (cm), or other units may be given *in addition* to the dimension in mm when convenient to aid comprehension.
 
@@ -71,8 +71,7 @@ If PCBs are used the following characteristics should be followed to improve int
 
 ## 3. Sensor Measurements
 
-The T-Stick shall be able to measure or approximate the following properties:
-
+These remarks are meant to be normative. Adherence to these remarks is meant to improve interoperability between present and future T-Stick implementations. The T-Stick should be able to measure or approximate the following properties:
 
 1. Acceleration
 2. Orientation
@@ -83,14 +82,14 @@ The T-Stick shall be able to measure or approximate the following properties:
 7. Brushes
 8. Rubs
 
-It is recommended to use a similar set of sensors and algorithms as previous [T-Stick designs](./T-Stick-functions.md) to maintain similar behavior across T-Sticks. These properties should be able to meet the accuracy requirement (Requirement 3.2) outlined in [Technical Requirements and Constraints](./Technical%20Requirements%20and%20Constraints.md). Additionally any sensor fusion and gestural extraction should be done in the T-Stick firmware.
+It is recommended to use a similar set of sensors and algorithms as previous T-Stick designs to maintain similar behavior across T-Sticks. These properties should be able to meet the accuracy requirement (Requirement 3.2) outlined in [Technical Requirements and Constraints](./requirements.md). Additionally any sensor fusion and gestural extraction should be done in the T-Stick firmware.
 
 ## 4. Signal Namespace
 
 If interoperability with previous T-Stick pieces is desired the following guidelines should be followed:
 
 
-1. The T-Stick should use an existing namespace. Check [previous designs](./T-Stick-functions.md#previous-designs) for past and current namespaces.
+1. The T-Stick should use an existing namespace. Check previous designs for past and current namespaces.
 2. If you wish for the T-Stick to be able to play older pieces the T-Stick firmware should have a built in translation layer for signals. External translation layers can be used but are not desired.
 
 

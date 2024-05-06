@@ -97,7 +97,7 @@ The Sensor System of the T-Stick manages the initialization, communication, and 
 | 3.4 | The sensor system will be able to identify sensors that are not communicating. | Demonstration |
 | 3.5 | The sensor system will continue operating regardless of the states of the sensors | Test |
 | 3.6 | The sensor system will have a calibration mode which enables artist to manually calibrate the sensors. | Demonstration/Test |
-| 3.7 | The sensor system will be able to measure or approximate the following properties listed in Section 3 of the [T-Stick Design Guidelines](./T-Stick%20Design%20Guidelines.md). | Demonstration |
+| 3.7 | The sensor system will be able to measure or approximate the following properties listed in Section 3 of the [T-Stick Design Guidelines](./design-guidelines.md). | Demonstration |
 
 #### 3.1: The sensor system will have a polling rate of at least 1000Hz.
 
@@ -125,13 +125,13 @@ Calibration is important, as it improves sensor accuracy and precision, artist s
 
 ### 4. Reliability and Maintainability
 
-As the name suggests this section contains all requirements relating to reliability and availability. This includes a PIR and PMR target for the T-Stick. We use the model defined in the [Availability Modelling](./Availability%20Modelling.md) page for computing the PIR and PMR of the T-Stick. The robustness requirements are to ensure the T-Stick can handle elevated levels of shaking and jabbing for short periods of time without permanent failures.
+As the name suggests this section contains all requirements relating to reliability and availability. This includes a PIR and PMR target for the T-Stick. The robustness requirements are to ensure the T-Stick can handle elevated levels of shaking and jabbing for short periods of time without permanent failures.
 
 | **ID** | **Requirements** | **Verification Method (IADT)** |
 |----|----|----|
 | **4** | **Reliability and Availability** |    |
-| 4.1 | The T-Stick will have a [Practice/Performance Interruption Rate (PIR)](./Availability%20Modelling.md) of 1%. | Analysis |
-| 4.2 | The T-Stick will have a [Playing/Maintenance Ratio (PMR)](./Availability%20Modelling.md) of at least 1. | Analysis |
+| 4.1 | The T-Stick will have a Practice/Performance Interruption Rate (PIR) of 1%. | Analysis |
+| 4.2 | The T-Stick will have a Playing/Maintenance Ratio (PMR) of at least 1. | Analysis |
 | 4.3 | The T-Stick will be robust to jabs. | Test |
 | 4.4 | The T-Stick will be robust to shakes. | Test |
 
@@ -158,7 +158,7 @@ The manufacturability Requirements are all the requirements related to the manuf
 | **ID** | **Requirements** | **Verification Method (IADT)** |
 |----|----|----|
 | **5** | **Manufacturability** |    |
-| 5.1 | The T-Stick will follow the design guidelines and requirements outlined in sections 1 and 2 of the [T-Stick Design Guidelines](./Technical%20Requirements%20and%20Constraints/T-Stick%20Design%20Guidelines.md). | Demonstration |
+| 5.1 | The T-Stick will follow the design guidelines and requirements outlined in sections 1 and 2 of the [T-Stick Design Guidelines](./design-guidelines.md). | Demonstration |
 | 5.2 | The physical design documentation will include a bill of materials. | Demonstration |
 | 5.2.1 | The bill of materials will have fewer than 64 individual parts, including fly wires, screws, nuts, and heat shrink. | Demonstration |
 | 5.2.2 | The bill of materials will have fewer than 40 distinct types of parts. | Demonstration |
@@ -168,7 +168,7 @@ The manufacturability Requirements are all the requirements related to the manuf
 | 5.6 | The final assembly and repair of the T-Stick will be possible using only a soldering iron, wire stripper/cutter, heat gun, saw, and hex key. | Demonstration |
 | 5.7 | The T-Stick will use common readily available parts and materials. | Demonstration |
 
-#### 5.1: The T-Stick will follow the design guidelines and requirements outlined in Sections 1 and 2 of the [ T-Stick Design Guidelines](./Technical%20Requirements%20and%20Constraints/T-Stick%20Design%20Guidelines.md).
+#### 5.1: The T-Stick will follow the design guidelines and requirements outlined in Sections 1 and 2 of the [ T-Stick Design Guidelines](./design-guidelines.md).
 
 Sections 1 and 2 of the T-Stick design guidelines outline the physical constraints that make up the T-Stick. If new designers which to make T-Sticks these should be followed to maximise playability of older pieces. Note that due to the rapid changes in the hardware space and firmware changes to the T-Stick it may not be possible to design a T-Stick that is identical to a previous design.
 
