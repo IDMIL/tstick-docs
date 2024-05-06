@@ -1,5 +1,14 @@
 # Getting Started with your T-Stick
 
+## T-Stick Variants
+| Generation |          Model            | Variations                 | Platform                                |
+|------------|:-------------------------:|----------------------------|-----------------------------------------|
+| 1G         | Alto, Tenor               | None                       | Atmega8                                 |
+| 2G         | Sopranino, Soprano, Tenor | 2G, 2GX, 2GG, 2G-IMU, 2GW  | Arduino, ESP8266                        |
+| 3G         | Soprano                   | None                       | Arduino                                 |
+| 4G         | Sopranino, Soprano        | 4GW-2018, 4GW-2021         | ESP32                                   |
+| 5G         | Sopranino, Soprano        | 5GW-Trill, 5GW-Enchanti    | ESP32-S3                                |
+
 ## Building, Flashing and Connection to your T-Stick
 Guides for building, flashing and connectiong to various T-Sticks.
 

@@ -6,15 +6,6 @@ The T-Stick is a DMI conceived by Joseph Malloch and D. Andrew Stewart at the In
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/BudSGA511pg?si=oSp4g7a-amvRy366" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## T-Stick Variants
-| Generation |          Model            | Variations                 | Platform                                |
-|------------|:-------------------------:|----------------------------|-----------------------------------------|
-| 1G         | Alto, Tenor               | None                       | Atmega8                                 |
-| 2G         | Sopranino, Soprano, Tenor | 2G, 2GX, 2GG, 2G-IMU, 2GW  | Arduino, ESP8266                        |
-| 3G         | Soprano                   | None                       | Arduino                                 |
-| 4G         | Sopranino, Soprano        | 4GW-2018, 4GW-2021         | ESP32                                   |
-| 5G         | Sopranino, Soprano        | 5GW-Trill, 5GW-Enchanti    | ESP32-S3                                |
-
 ## Read More
 - [Source Code](https://github.com/IDMIL/T-Stick)
 - [Project Website](https://www.idmil.org/project/the-t-stick/)
