@@ -1,4 +1,4 @@
-# Advanced Settings
+# Sensor Settings
 
 To access the T-Stick Settings page, access the T-Stick Setup page using the instructions shown in the connection guide.
 

@@ -6,9 +6,9 @@
 
 This method is easier/faster. It uses [esptool.py](https://github.com/espressif/esptool).
 
-### Download the [bin files](../firmware/bin)
+### Download the [bin files](https://github.com/IDMIL/T-Stick/tree/main/firmware)
 
-* Download the .bin files located at the [bin folder](../firmware/bin)
+* Download the .bin files located at the [bin folder](https://github.com/IDMIL/T-Stick/tree/main/firmware)
 
 ### Download [esptool.py](https://github.com/espressif/esptool)
 
@@ -30,14 +30,14 @@ This method is easier/faster. It uses [esptool.py](https://github.com/espressif/
 
 ### Flash the firmware (.bin files)
 
-* Use *Finder*, *Terminal*, or *File Explorer* to copy the contents of the [bin](../firmware/bin/) folder (you should copy 3 .bin files) to the *esptool-master* folder
+* Use *Finder*, *Terminal*, or *File Explorer* to copy the contents of the [bin](https://github.com/IDMIL/T-Stick/tree/main/firmware) folder (you should copy 3 .bin files) to the *esptool-master* folder
 * Navigate to the *esptool-master* folder in *Terminal* or *Command Prompt*
 * Run the command (__don't forget to replace the --port (/dev/cu.wchusbserial1410) option for your T-Stick port__): `esptool.py --chip esp32 --port /dev/cu.wchusbserial1410 --baud 115200 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size detect 0xe000 boot_app0.bin 0x1000 bootloader_dio_80m.bin 0x10000 esp32_arduino_FW211124.bin 0x8000 esp32_arduino_FW211124.ino.partitions.bin 2686976 esp32_arduino_FW211124.spiffs.bin`. Wait for the process to be complete. Do not unplug or turn off your T-Stick during the process.
 
 To set the T-Stick info and test if the data is being send correctly:
 
-* Connect the T-Stick to a network (instructions [here](./T-Stick_2GW_Connecting_Guide(v1.2).md));
-* Open the Pure Data (PD) or Max/MSP patch to receive T-Stick messages (they can be found [here](../Test_config/));
+* Connect the T-Stick to a network (instructions [here](./connection-guide.md));
+* Open the Pure Data (PD) or Max/MSP patch to receive T-Stick messages (they can be found [here](https://github.com/IDMIL/T-Stick/tree/main/Test_config));
 * Start receive OSC messages according to the chosen patch.
 
 ## Option 2: Using PlatformIO
@@ -74,14 +74,9 @@ You can also interact with the controller using the following commands:
 
 To test if the data is being send correctly:
 
-* Connect the T-Stick to a network (instructions [here](./connectionguide.md))
+* Connect the T-Stick to a network (instructions [here](./connection-guide.md))
 * Open the Pure Data (PD) or Max/MSP patch to receive T-Stick messages (they can be found [here](https://github.com/IDMIL/T-Stick/tree/main/Test_config/PD))
 * Start receive OSC messages according to the chosen patch
-
-## Other Documentation
-- [T-Stick 4GW Technical Specs](./Technical%20Information.md)
-- [T-Stick Connection Guide](./connectionguide.md)
-- [Building a Sopranino T-Stick 4GW](./buildguide.md)
 
 ## Firmware Information
 

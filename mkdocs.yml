@@ -47,6 +47,9 @@ markdown_extensions:
 #page tree
 nav:
   - Home: index.md
+  - Getting Started:
+    - getting-started/index.md
+    - Contribution: getting-started/contribution.md
   - Setup:
     - setup/index.md
     - Changing communication protocols: setup/wireless-settings.md
