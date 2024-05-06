@@ -1,6 +1,7 @@
 site_name: T-Stick Docs
 site_url: https://idmil.github.io/tstick-docs/
-repo_url: https://github.com/IDMIL/tstick-docs
+repo_url: https://github.com/IDMIL/T-Stick
+repo_name: IDMIL/T-Stick
 copyright: Copyright &copy; 2018 - 2024 Input Devices and Music Interaction Laboratory, Schulich School of Music, McGill University
 theme:
   name: material
@@ -49,7 +50,7 @@ nav:
   - Home: index.md
   - Getting Started:
     - getting-started/index.md
-    - Contribution: getting-started/contribution.md
+    - Contribute to the Docs: getting-started/contribution.md
   - Setup:
     - setup/index.md
     - Changing communication protocols: setup/wireless-settings.md
