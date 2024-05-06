@@ -1,0 +1,72 @@
+site_name: T-Stick Docs
+site_url: https://idmil.github.io/tstick-docs/
+repo_url: https://github.com/IDMIL/tstick-docs
+copyright: Copyright &copy; 2018 - 2024 Input Devices and Music Interaction Laboratory, Schulich School of Music, McGill University
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: Images/favicon.ico
+  logo: Images/logo.png
+  features:
+    - navigation.tabs
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+plugins:
+  - search
+  - git-authors
+  - git-revision-date-localized:
+      enable_creation_date: true
+
+markdown_extensions: 
+  - attr_list
+  - md_in_html
+  - tables
+
+#page tree
+nav:
+  - Home: index.md
+  - Setup:
+    - setup/index.md
+    - Changing communication protocols: setup/wireless-settings.md
+    - Changing sensor settings: setup/advanced-settings.md
+  - Technical Documentation:
+    - T-Stick Design Guidelines: engineering/design-guidelines.md
+    - T-Stick 5GW Design Requirements: engineering/requirements.md
+    - T-Stick 4GW/5GW Functions: engineering/functions.md
+    - T-Stick Gestures: engineering/gestures.md
+  - Design Documentation:
+    - designs/index.md
+    - 4th Generation T-Sticks: 
+      - T-Stick 4GW:
+        - Information: designs/tstick-4gw/index.md
+        - Build Guide: designs/tstick-4gw/build-guide.md
+        - Flashing Guide: designs/tstick-4gw/flashing-guide.md
+        - Connecting Guide: designs/tstick-4gw/connection-guide.md
+    - 5th Generation T-Sticks: 
+      - T-Stick 5GW:
+        - Information: designs/tstick-5gw/index.md
+        - Build Guide: designs/tstick-5gw/build-guide.md
+        - Flashing Guide: designs/tstick-5gw/flashing-guide.md
+        - Connecting Guide: designs/tstick-5gw/connection-guide.md

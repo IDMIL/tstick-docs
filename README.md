@@ -2,9 +2,9 @@
 
 Repository for T-Stick documentation at https://idmil.github.io/tstick-docs/
 
-Pages generated using Docsify.js
+Pages generated using Material for MkDocs
 
-To learn more about using Docsify, visit https://docsify.js.org.
+To learn more about using Material for MkDocs, visit https://squidfunk.github.io/mkdocs-material/
 
 ## TODO
 - [ ] Finish Detailed Technical Information for T-Stick 4GW/5GW

@@ -1,4 +1,4 @@
-# Connecting to a T-Stick 5GW
+# Connecting to a T-Stick 4GW/5GW
 
 ## Option 1: Wireless Connection
 
