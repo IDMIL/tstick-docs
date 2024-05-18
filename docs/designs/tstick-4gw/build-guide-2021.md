@@ -109,5 +109,3 @@ Hooray, you built a T-Stick!
 - Version 1.2: Brady Boettcher
 - Version 1.1: Edu Meneses - eduardo.meneses@mail.mcgill.ca
 - Version 1.0: Alex Nieva - alex.nieva@mail.mcgill.ca
-
-__Input Devices and Music Interaction Laboratory__ <http://www.idmil.org>Schulich School of MusicMcGill University550 Rue Sherbrooke Ouest, Suite 500Montreal, QC, H3A 1ECanada

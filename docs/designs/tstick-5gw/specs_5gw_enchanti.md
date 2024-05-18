@@ -15,7 +15,7 @@ For information on how to use the T-Stick 5GW-Enchanti check out the guides belo
 ## Specification
 | Feature                     | Details                                                                                                                    |
 |-----------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Status                      | Recommended for new builds                                                                                                 |
+| Status                      | Under development                                                                                                          |
 | Release Year                | 2024                                                                                                                       |
 | Communication Type          | Wi-Fi 4, 802.11 b/g/n                                                                                                      |
 | Compatible protocols        | Open Sound Control (OSC)/Libmapper                                                                                         |

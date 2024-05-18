@@ -65,7 +65,6 @@ nav:
   - Home: index.md
   - Getting Started:
     - getting-started/index.md
-    - Contribute to the Docs: getting-started/contribution.md
   - Setup:
     - setup/index.md
     - Changing communication protocols: setup/wireless-settings.md
@@ -76,7 +75,6 @@ nav:
     - T-Stick 4GW/5GW Functions: engineering/functions.md
     - T-Stick Gestures: engineering/gestures.md
   - Design Documentation:
-    - designs/index.md
     - 4th Generation T-Sticks:
       - designs/tstick-4gw/index.md 
       - Variants:
@@ -89,7 +87,7 @@ nav:
         - Connecting Guide: designs/tstick-4gw/connection-guide.md
     - 5th Generation T-Sticks: 
       - designs/tstick-5gw/index.md
-      - T-Stick 5GW:
+      - Variants:
         - T-Stick 5GW-Trill: designs/tstick-5gw/specs_5gw_trill.md
         - T-Stick 5GW-Enchanti: designs/tstick-5gw/specs_5gw_enchanti.md
       - Guides:
@@ -97,3 +95,7 @@ nav:
         - Build Guide (5GW-Enchanti): designs/tstick-5gw/build-guide-enchanti.md
         - Flashing Guide: designs/tstick-5gw/flashing-guide.md
         - Connecting Guide: designs/tstick-5gw/connection-guide.md
+  - Community:
+    - Performances: community/performances.md
+    - Publications: community/publications.md
+    - Contribute to the Docs: community/contribution.md

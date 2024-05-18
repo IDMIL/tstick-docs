@@ -1,0 +1,11 @@
+# Publications
+
+- Malloch, J., Wanderley, M. M. (2007). The T-Stick : From Musical Interface to Musical Instrument. In Proceedings of the 2007 International Conference on New Interfaces for Musical Expression (NIME 2007) (pp. 66--69). New York City, NY, USA.
+- Nieva, A., Wang, J., Malloch, J., Wanderley, M. M. (2018). The T-Stick: Maintaining a 12 year-old digital musical instrument. In Proceedings of the 2018 International Conference on New Interfaces for Musical Expression (NIME 2018) (pp. 198–199). Blacksburg, VA, USA.
+- Meneses, E. A. L., Fukuda, T., Wanderley, M. M. (2020). Expanding and Embedding a High-level Gesture Vocabulary for the Digital and Augmented Musical Instruments. In Proc. of the International Conference on Human-Computer Interaction (HCII). Copenhagen, Denmark.
+- Calegario, F., Wanderley, M., Tragtenberg, J., Wang, J., Sullivan, J., Meneses, E., Franco, I., Kirkegaard, M., Bredholt, M., Rohs, J. (2020). Probatio 1.0: collaborative development of a toolkit for functional DMI prototypes. In Proceedings of the 2020 International Conference on New Interfaces for Musical Expression (NIME 2020) (pp. 6). Birmingham, UK.
+- West, T. (2020). Making Mappings: Examining the Design Process with Libmapper and the T-Stick. In M.A. Thesis, McGill University (pp. 78). Montreal, Canada.
+- Fukuda, T., Meneses, E., West, T. J., Wanderley, M. M. (2021). The T-Stick Music Creation Project: An approach to building a creative community around a DMI. In Proceedings of the 2021 International Conference on New Interfaces for Musical Expression (NIME 2021). Shanghai, China.
+- Meneses, E. A. L. (2022). Iterative Design in DMIs and AMIs: Expanding and embedding a high-level gesture vocabulary for the T-Stick and GuitarAMI. In Ph.D. Thesis, McGill University. McGill University.Montreal, Qc, Canada.
+- Fukuda, T., Wanderley, M. M. (2023). T-Patch: a software application for T-Stick Digital Musical Instruments Mexico City, MX. In Proceedings of the 2023 International Conference on New Interfaces for Musical Expression (NIME2023). Mexico City, MX.
+- Niyonsenga, A., Wanderley, M. M. (2023). Tools and Techniques for the Maintenance and Support of Digital Musical Instruments. In Proceedings of the 2023 International Conference on New Interfaces for Musical Expression (NIME2023). Mexico City, MX.

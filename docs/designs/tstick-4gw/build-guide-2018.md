@@ -101,11 +101,11 @@ The Force Sensitive Resistor and the Piezoelectric sensor are glued to the frame
 
 ![T-Stick Sopranino - piezo placement](./Images/piezo_in_place_h.jpg "T-Stick Sopranino - piezo placement")
 
-The signal processing circuit is all analog and needs to be soldered to a perfboard. The piezoelectric circuit output is to be soldered to pin 32 of the ESP32 and the FSR circuit output to pin 33. Electronic building tools can be found in the Electronics Shop at the McGill Music Tech Department.
+The signal processing circuit is all analog and needs to be soldered to a perfboard. The piezoelectric circuit output is to be soldered to pin 32 of the ESP32 and the FSR circuit output to pin 33. Electronic building tools can be found in the Electronics Shop at the McGill Music Tech Department. Solder long cables to the FSR pins.
 
 !!! tip
 
-    Solder long cables to the FSR pins. They are very delicate. Put some heat shrink tube to reinforce the end of the fsr so it doesn’t break. If it breaks, it’s not repairable.
+    The FSR pins are very delicate. Put some heat shrink tube to reinforce the end of the fsr so it doesn’t break. If it breaks, it’s not repairable.
 
 Here’s the pinout for the LM358 opamp you will be using in the above circuit:
 

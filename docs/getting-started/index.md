@@ -18,48 +18,8 @@ The 4th Generation of T-Sticks is the first generation of Wi-Fi based T-Sticks. 
 
 [:material-information: Click here for more details on 4th generation T-Sticks](../designs/tstick-4gw/index.md)
 
-<div class="grid cards" markdown>
-
-- __T-Stick 4GW-2018__ 
-
-    ---
-
-    An ESP32 based T-Stick using the LolinD32 Development board and a custom touch board.
-
-    [:octicons-arrow-right-24: Getting started](../designs/tstick-4gw/specs_4gw_2018.md)
-
-- __T-Stick 4GW-2021__ 
-
-    ---
-
-    An ESP32 based T-Stick using the TinyPico Development board and Bela Trill Touch Board.
-
-    [:octicons-arrow-right-24: Getting started](../designs/tstick-4gw/specs_4gw_2021.md)
-
-</div>
-
 ### 5th Generation T-Sticks
 
-The T-Stick 5GW consists of a custom ESP32 board which integrates a ESP32-S3 WROOM 2 Module with a ICM20948 IMU and MAX17055 on a single board, and a touch board that has a pinout for the Trill Craft board as well as, two JST-SH 4 pin connectors to daisy chain multiple touch boards together.
+The 5th Generation T-Sticks consists of a custom ESP32 board which integrates a ESP32-S3 WROOM 2 Module with a ICM20948 IMU and MAX17262 on a single board, and a touch board that has a pinout for the Trill Craft board as well as, two JST-SH 4 pin connectors to daisy chain multiple touch boards together.
 
 [:material-information: Click here for more details on 5th generation T-Sticks](../designs/tstick-5gw/index.md)
-
-<div class="grid cards" markdown>
-
-- __T-Stick 5GW-Trill__ 
-
-    ---
-    
-    An ESP32-S3 based T-Stick using the custom EnchantiS3 board and Bela's Trill Touch Board.
-
-    [:octicons-arrow-right-24: Getting started](../designs/tstick-5gw/index.md)
-
-- __T-Stick 5GW-Enchanti__ 
-  
-    ---
-    
-    An ESP32-S3 based T-Stick using the custom EnchantiS3 board and the Enchanti Touch Board.
-
-    [:octicons-arrow-right-24: Getting started](../designs/tstick-5gw/index.md)
-
-</div>
