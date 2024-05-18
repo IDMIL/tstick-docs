@@ -5,6 +5,7 @@ repo_name: IDMIL/T-Stick
 copyright: Copyright &copy; 2018 - 2024 Input Devices and Music Interaction Laboratory, Schulich School of Music, McGill University
 theme:
   name: material
+  custom_dir: overrides
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
