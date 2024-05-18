@@ -44,6 +44,21 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 #page tree
 nav:
@@ -62,15 +77,23 @@ nav:
     - T-Stick Gestures: engineering/gestures.md
   - Design Documentation:
     - designs/index.md
-    - 4th Generation T-Sticks: 
-      - T-Stick 4GW:
-        - Information: designs/tstick-4gw/index.md
-        - Build Guide: designs/tstick-4gw/build-guide.md
+    - 4th Generation T-Sticks:
+      - designs/tstick-4gw/index.md 
+      - Variants:
+        - T-Stick 4GW-2018: designs/tstick-4gw/specs_4gw_2018.md
+        - T-Stick 4GW-2021: designs/tstick-4gw/specs_4gw_2021.md
+      - Guides:
+        - Build Guide (4GW-2018): designs/tstick-4gw/build-guide-2018.md
+        - Build Guide (4GW-2021): designs/tstick-4gw/build-guide-2021.md
         - Flashing Guide: designs/tstick-4gw/flashing-guide.md
         - Connecting Guide: designs/tstick-4gw/connection-guide.md
     - 5th Generation T-Sticks: 
+      - designs/tstick-5gw/index.md
       - T-Stick 5GW:
-        - Information: designs/tstick-5gw/index.md
-        - Build Guide: designs/tstick-5gw/build-guide.md
+        - T-Stick 5GW-Trill: designs/tstick-5gw/specs_5gw_trill.md
+        - T-Stick 5GW-Enchanti: designs/tstick-5gw/specs_5gw_enchanti.md
+      - Guides:
+        - Build Guide (5GW-Trill): designs/tstick-5gw/build-guide-trill.md
+        - Build Guide (5GW-Enchanti): designs/tstick-5gw/build-guide-enchanti.md
         - Flashing Guide: designs/tstick-5gw/flashing-guide.md
         - Connecting Guide: designs/tstick-5gw/connection-guide.md

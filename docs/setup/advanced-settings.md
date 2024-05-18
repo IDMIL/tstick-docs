@@ -1,5 +1,9 @@
 # Sensor Settings
 
+!!! note
+
+    This page only applies to the T-Stick 4GW/5GW and their variants.
+
 To access the T-Stick Settings page, access the T-Stick Setup page using the instructions shown in the connection guide.
 
 You can access the settings of your T-Stick by connecting to the
