@@ -3,17 +3,19 @@
 ## Videos
 
 ### The One (Fernando Rocha)
+
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1620495?h=b4a9f3785c" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 <p>Brazilian percussionist Fernando Rocha performing D. Andrew Stewart's piece "The One" on Tenor T-Stick at McGill University. The T-Stick is a digital musical instrument designed and constructed by Joseph Malloch at the IDMIL.</p>
 
 ### Everybody to the Power of One (Andrew Stewart)
+
 <div style="padding:75.4% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1776361?h=55d15b5ecd" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 <p>This is a video of composer/performer D. Andrew Stewart playing his composition "Everybody to the power of one" on a soprano T-Stick, which he calls the "sonar jo," at the SAT in Montréal. The T-Stick is a digital musical instrument I designed and built in the Input Devices and Music Interaction Lab at McGill University. Andrew was a collaborator on the T-Stick project, along with percussionist Fernando Rocha, pianist Xenia Pestova and cellist Erika Donald.</p>
 
 ### WITH WINDS for Soprano T-Stick (New Calgary)
+
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/89815225?h=faf11fa5cb&title=0&byline=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 <p>A performance in the wonderful acoustic of Eckhardt-Gramatt&eacute; Hall (Rozsa Centre, The University of Calgary) as part of &ldquo;From Up There and Down&rdquo; (New Works Calgary concert season, 2012-13). WITH WINDS is the first of a series of pieces showcasing new performance modes developed during the 2010 T-Stick Composition Workshops. The workshop participants and I created new implementations of pre-existing techniques (i.e., new uses of thrusting, finger-framing, lasso) and developed new modes such as: stirring, brushing and a fulcrum-inspired type of pivoting. With regards to sound, I developed a &lsquo;vocabulary&rsquo; that integrates well with wood wind instruments, capturing not only sustained wind instrument sounds but also a wealth of extended technique sounds. My solution was to implement several physical models that emulate or evoke extended techniques on wind instruments. Moreover, I wanted to suggest the &lsquo;closeness&rsquo; &ndash; even intimacy &ndash; an acoustic instrumentalist has with his or her instrument and sound by creating t-stick playing techniques that at first, require slow-moving gestures of the stick around the body of the performer, followed by the addition of vigorous movements, which are gradually added as the music develops. The nearness of acoustic instrument practise is gradually extended and expanded and as a result, the space in which the t-stick digital instrument is played, is enveloped into the instrument itself.</p>
-
 
 ## Partial list of Public Appearances
 
