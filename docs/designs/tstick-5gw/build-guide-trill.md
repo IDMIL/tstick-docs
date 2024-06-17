@@ -35,14 +35,14 @@
 
 Print the following [files from the T-Stick repository](https://github.com/aburt2/T-Stick/tree/5gw-main/3D_printing/T-Stick%205GW).
 
-- x1 esp32-bed
+- x1 esp32-endcap
+- x1 esp32-capcloser
 - x1 touch-board-bed
 - x2 touch-board-door
 - x1 blank-endcap
-- x1 cap-closer
 
 !!! note
-    If you are using an 18650 battery you will need to print ``liion-endcap`` instead of the ``blank-endcap`` and an additional ``cap-closer``.
+    If you are using an 18650 battery you will need to print ``liion-endcap`` and ``liion-capcloser`` instead of the ``blank-endcap``.
 
 ![Overview of 3D printed components](#)
 
