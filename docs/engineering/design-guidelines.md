@@ -82,7 +82,7 @@ These remarks are meant to be normative. Adherence to these remarks is meant to 
 7. Brushes
 8. Rubs
 
-It is recommended to use a similar set of sensors and algorithms as previous T-Stick designs to maintain similar behavior across T-Sticks. These properties should be able to meet the accuracy requirement (Requirement 3.2) outlined in [Technical Requirements and Constraints](./requirements.md). Additionally any sensor fusion and gestural extraction should be done in the T-Stick firmware.
+It is recommended to use a similar set of sensors and algorithms as previous T-Stick designs to maintain similar behavior across T-Sticks. 
 
 ## 4. Signal Namespace
 
@@ -90,6 +90,6 @@ If interoperability with previous T-Stick pieces is desired the following guidel
 
 
 1. The T-Stick should use an existing namespace. Check previous designs for past and current namespaces.
-2. If you wish for the T-Stick to be able to play older pieces the T-Stick firmware should have a built in translation layer for signals. External translation layers can be used but are not desired.
+2. If you wish for the T-Stick to be able to play older pieces an external translation layer should be made for musicians/artists.
 
 

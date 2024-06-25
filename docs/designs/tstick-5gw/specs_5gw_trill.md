@@ -6,7 +6,7 @@ The T-Stick 5GW-Trill is a 5th generation T-Stick that uses [Bela's Trill Craft 
 For information on how to use the T-Stick 5GW-Trill check out the guides below:
 <div class="grid cards" markdown>
 
-- [:material-wrench: __Build Guide__](./build-guide-trill.md)
+- [:material-wrench: __Build Guide__](./build-guide.md)
 - [:material-upload: __Flashing Guide__](./flashing-guide.md)
 - [:material-wifi: __Connection Guide__](./connection-guide.md)
 

@@ -53,6 +53,8 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.tabbed:
+      alternate_style: true
 
 extra_javascript:
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
@@ -82,8 +84,7 @@ nav:
         - T-Stick 4GW-2018: designs/tstick-4gw/specs_4gw_2018.md
         - T-Stick 4GW-2021: designs/tstick-4gw/specs_4gw_2021.md
       - Guides:
-        - Build Guide (4GW-2018): designs/tstick-4gw/build-guide-2018.md
-        - Build Guide (4GW-2021): designs/tstick-4gw/build-guide-2021.md
+        - Build Guide: designs/tstick-4gw/build-guide.md
         - Flashing Guide: designs/tstick-4gw/flashing-guide.md
         - Connecting Guide: designs/tstick-4gw/connection-guide.md
     - 5th Generation T-Sticks: 
@@ -92,8 +93,7 @@ nav:
         - T-Stick 5GW-Trill: designs/tstick-5gw/specs_5gw_trill.md
         - T-Stick 5GW-Enchanti: designs/tstick-5gw/specs_5gw_enchanti.md
       - Guides:
-        - Build Guide (5GW-Trill): designs/tstick-5gw/build-guide-trill.md
-        - Build Guide (5GW-Enchanti): designs/tstick-5gw/build-guide-enchanti.md
+        - Build Guide: designs/tstick-5gw/build-guide.md
         - Flashing Guide: designs/tstick-5gw/flashing-guide.md
         - Connecting Guide: designs/tstick-5gw/connection-guide.md
   - Community:

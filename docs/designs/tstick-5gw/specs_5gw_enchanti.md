@@ -2,16 +2,6 @@
 
 The T-Stick 5GW-Enchanti is a 5th generation T-Stick that uses [Enchanti Touch Board](https://github.com/IDMIL/EnchantiTouch). More details on 5th generation T-Sticks can be found [here](./index.md).
 
-## Guides
-For information on how to use the T-Stick 5GW-Enchanti check out the guides below:
-<div class="grid cards" markdown>
-
-- [:material-wrench: __Build Guide__](./build-guide-enchanti.md)
-- [:material-upload: __Flashing Guide__](./flashing-guide.md)
-- [:material-wifi: __Connection Guide__](./connection-guide.md)
-
-</div>
-
 ## Specification
 | Feature                     | Details                                                                                                                    |
 |-----------------------------|----------------------------------------------------------------------------------------------------------------------------|

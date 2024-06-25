@@ -6,16 +6,6 @@
 
 The T-Stick 4GW-2021 was designed by Eduardo Meneses in September of 2021. It uses the same signal namespace as the T-Stick 4GW-2018 but replaces the IDMIL capsence board with [Bela's Trill Craft Touch Board](https://bela.io/products/trill/).
 
-## Guides
-For information on how to use the T-Stick 4GW-2021 check out the guides below:
-<div class="grid cards" markdown>
-
-- [:material-wrench: __Build Guide__](./build-guide-2021.md)
-- [:material-upload: __Flashing Guide__](./flashing-guide.md)
-- [:material-wifi: __Connection Guide__](./connection-guide.md)
-
-</div>
-
 ## Specifications
 | Feature                     | Details                                                                                              |
 |-----------------------------|------------------------------------------------------------------------------------------------------|
