@@ -72,6 +72,7 @@ nav:
     - setup/index.md
     - Changing communication protocols: setup/wireless-settings.md
     - Changing sensor settings: setup/advanced-settings.md
+    - Change settings using json file: setup/json-settings.md
   - Technical Documentation:
     - T-Stick Design Guidelines: engineering/design-guidelines.md
     - T-Stick 5GW Design Requirements: engineering/requirements.md
