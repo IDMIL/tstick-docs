@@ -2,7 +2,7 @@
 
 
 
-## Option 1: using .bin files and [esptool.py](http://esptool.py)
+## Option 1: using .bin files and [esptool.py](http://esptool.py) [DEPRECATED]
 
 This method is easier/faster. It uses [esptool.py](https://github.com/espressif/esptool).
 
@@ -40,43 +40,62 @@ To set the T-Stick info and test if the data is being send correctly:
 * Open the Pure Data (PD) or Max/MSP patch to receive T-Stick messages (they can be found [here](https://github.com/IDMIL/T-Stick/tree/main/Test_config));
 * Start receive OSC messages according to the chosen patch.
 
-## Option 2: Using PlatformIO
+## Option 2: Using PlatformIO [RECOMMENDED]
 
 *INSTALL ALL DEPENDENCIES AND REAL ALL OBSERVATIONS BEFORE UPLOAD !*
 
-### Install PlatformIO
+You can use Visual Studio Code and the PlatformIO extension in order to flash firmware for the T-Stick-5GW.
 
-To download and install PlatformIO, follow the instructions at <https://platformio.org/platformio-ide>.
+### Setup VS Code and PlatformIO
+1. Download [Visual Studio Code](https://code.visualstudio.com/download).
+2. Follow the [installation guide](https://docs.platformio.org/en/latest/integration/ide/vscode.html#installation) on PlatformIO's website to setup PlatformIO extension in VS Code
 
-We recomment using PlatformIO under Visual Studio Code, but you can also coose another editor.
+!!! tip
 
-### Clone the T-Stick repository
+    If you are not familiar with PlatformIO or VS Code it is recommended to read a quick start guide for both platforms before continuing this guide.
 
-Clone this repository using `git clone https://github.com/IDMIL/T-Stick.git`. Alternatively, you can download the repository as a zip file at <https://github.com/IDMIL/T-Stick>. Take note of the folder location.
+### Build the Firmware
+3. Download and unzip the latest firmware from the [T-Stick reposity](https://github.com/IDMIL/T-Stick/)
+4. In Visual Studio, under the File menu select open folder.
+  ![open folder button in VS code code](./Images/vscode-open-folder.png)
+5. Navigate to where you downloaded the T-Stick repository and select the firmware folder.
+6. On the bottom bar select the correct environment depending on your T-Stick version (ie: `tinypico` or `lolin_d32_pro`)
+7. In the `main.cpp` file ensure the `TSTICK_SIZE` is the correct value for your T-Stick.
+8. Navigate to the data folder and open `config.json`.
+9. Update the `id` of the T-Stick to a number of your choosing.
+10. Update the `author` to your name.
 
-### Open firmware project and flash it to the T-Stick
+11. Build the firmware by clicking the checkmark on the bottom menu.
 
-* Open the T-Stick firmware project (folder **firmware** in the T-Stick repository folder) in VSC/PlatformIO. You can get help on how to use PlatformIO at <https://docs.platformio.org/en/latest/core/quickstart.html>
-* You can make any necessary changes on the firmware before flashing (e.g., changing T-Stick ID, selecting the board and capacitive board accordingly)
-* If it is the first time flashing, you may see an error pointing to the ESP32 inet.h file. The file requires manual fixing. Check the issue at <https://github.com/mathiasbredholt/libmapper-arduino/issues/3>
+12. Click the PlatformIO Icon to show the Project Tasks.
 
-When ready, you need to flash both the firmware and the filesystem image. Choose the proper platform accordingly (*lolin_d32_pro* or *tinypico*) and use the PlatformIO menu to flash both images to the T-Stick.
+13. Select `Build Filesystem Image`.
 
-### Test T-Stick
+  ![PlatformIO project Tasks](./Images/vscode-project-tasks.png)
+
+### Upload the Firmware and Filesystem Image
+
+!!! note
+
+    If your T-Stick was in deep sleep prior to flashing, you may have to wake up the instrument by pressing the button for it to show up on your computer.
+
+14. Plug in your T-Stick to a USB Port on your computer.
+
+15. In the PlatformIO Project Tasks select `Upload Filesystem Image`.
+
+16. Once the filesystem is uploaded. Select `Upload` to flash the firmware to the board.
+
+!!! warning
+
+    DO NOT DISCONNECT the USB cable while the T-Stick is flashing.
 
 After flashing, you can use the VSC/PlatformIO serial monitor to check if the T-Stick is booting properly. You should see T-Stick booting process.
 
 You can also interact with the controller using the following commands:
 
-* 's' to start setup mode
-* 'reboot' to reboot
-* 'd' to enter deep sleep
-
-To test if the data is being send correctly:
-
-* Connect the T-Stick to a network (instructions [here](./connection-guide.md))
-* Open the Pure Data (PD) or Max/MSP patch to receive T-Stick messages (they can be found [here](https://github.com/IDMIL/T-Stick/tree/main/Test_config/PD))
-* Start receive OSC messages according to the chosen patch
+- `ping` to get the T-Stick to reply pong
+- `reboot` to reboot
+- `sleep` to enter deep sleep
 
 ## Firmware Information
 

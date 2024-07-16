@@ -30,9 +30,10 @@ You can use Visual Studio Code and the PlatformIO extension in order to flash fi
 11. Build the firmware by clicking the checkmark on the bottom menu.
 
 12. Click the PlatformIO Icon to show the Project Tasks.
-  ![PlatformIO project Tasks](./Images/vscode-project-tasks.png)
+
 13. Select `Build Filesystem Image`.
 
+  ![PlatformIO project Tasks](./Images/vscode-project-tasks.png)
 ### Upload the Firmware and Filesystem Image
 
 !!! note
@@ -54,3 +55,11 @@ You can use Visual Studio Code and the PlatformIO extension in order to flash fi
     If the T-Stick is not responding or there are issues with flashing try unscrew the cap closer for the ESP32-S3 endcap and hold the boot button while pressing the reset button to force the board into flash mode. If you do this you may need to press the reset button after flashing to force the T-Stick to flash again.
 
 Once the firmware is flashed you should see an orange light from the inside of the T-Stick. When the T-Stick successfully connects to a network you will see a flashing blue light.
+
+You can use the VSC/PlatformIO serial monitor to check if the T-Stick is booting properly. You should see T-Stick booting process.
+
+You can also interact with the controller using the following commands:
+
+- `ping` to get the T-Stick to reply pong
+- `reboot` to reboot
+- `sleep` to enter deep sleep
