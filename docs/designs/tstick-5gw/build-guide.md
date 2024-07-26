@@ -42,58 +42,62 @@
     !!! note
         If you are using an 18650 battery you will need to print ``liion-endcap`` and ``liion-capcloser`` instead of the ``blank-endcap``.
 
-    ![Overview of 3D printed components](#)
+    ![Overview of 3D printed components](./Images/trill_overview_components.png)
 
     #### Adding inserts
 
     Use a soldering iron or other heat source to add M2 inserts to the front of the ESP32 bed piece (x2).
 
-    ![M2 inserts in the front of the ESP32 cap](#)
+    ![M2 inserts in the front of the ESP32 cap](./Images/trill_m2_inserts.png)
 
     Add M3 inserts to the holes inside the ESP32 bed (x2). These will be used to screw in the board to the component.
 
-    ![M3 inserts for ESP32 board](#)
+    ![M3 inserts for ESP32 board](./Images/trill_M3_inserts_ESP32.png)
 
     Add M2 inserts to the holes on the side of the touch board beds (x4). These will be used to screw in the touch board doors.
 
-    ![M2 inserts for the touch board bed](#)
+    ![M2 inserts for the touch board bed](./Images/trill_m2_inserts_touch.png)
 
     ### Prepare the ABS/PVC Pipe
 
-    Cut the ABS/PVC pipe two pieces. One piece should be about ~8inch/20cm and other a short piece about ~1.2inch/3cm. Use super glue or other alternative methods to glue the touch board bed to both pieces of the ABS/PVC pipe. Make sure to glue the short piece to the end closest to the M3 inserts
+    Cut the ABS/PVC pipe two pieces. One piece should be about ~8inch/20cm and other a short piece about ~1.2inch/3cm. Use super glue or other alternative methods to glue the touch board bed to both pieces of the ABS/PVC pipe. Make sure to glue the short piece to the end closest to the M3 inserts.
 
-    !!! warning
-
-    ![touch board bed glued to pipe](#)
+    ![touch board bed glued to pipe](./Images/trill_touch_board_glued.png)
 
     !!! tip
         We recommend using a drop saw/mitre saw to get a clean cut
 
     Add M3 inserts to the last two holes closest to the short PVC pipe on the bottom of the touch board beds (x2). These will be used to secure the Trill Craft board.
 
+
+    ![M3 inserts for touch board](./Images/trill_M3_inserts_touch.png)
+
+
     !!! tip
         Add the M3 inserts from the top (from the flat part of the piece). This will ensure that you don't get fillament in the way when attempting to screw in the boards.
 
     #### Setup the touch board
 
-    Solder the Trill Craft board on the Trill Craft Extension Board. Make sure to line up the 
+    Solder the Trill Craft board on the Trill Craft Extension Board.
+
+    ![touch board soldered](./Images/trill_soldered_touch_board.png)
 
     Use two M3 screws to screw the Trill Craft extension board to the touch board bed. Connect the touch sensor to the FFC connectors on the Trill Craft board. Peel the cover from the tape and tape the touch sensor against the pipe as shown below.
 
-    ![touch sensor mounted](#)
+    ![touch sensor mounted](./Images/trill_touch_sensor_mounted.png)
 
     #### Mount the FSR
 
     Cut the 2-pin JST cable to about 10cm as shown in the image below.
 
-    ![cut jst cable, next to fsr](#)
+    ![cut jst cable, next to fsr](./Images/trill_fsr_jst_cablefsr.png)
 
     Solder the two ends of the JST cable to the two terminals of the FSR.
 
     !!! warning
         Take care with soldering the FSR. Excessive heat will damage the FSR pins.
 
-    ![soldered FSR connection](#)
+    ![soldered FSR connection](./Images/trill_fsr_soldered.png)
 
     !!! tip
         The FSR pins are very delicate. Put some heat shrink tube to reinforce the end of the fsr so it doesn’t break. If it breaks, it’s not repairable.
@@ -105,7 +109,7 @@
 
     | FSR mounted, before adding foam sheet                             | FSR mounted with foam sheet                                          |
     |-------------------------------------------------------------------|----------------------------------------------------------------------|
-    |  ![fsr mounted uncovered](#)     |  ![fsr mounted covered by foam sheet](#)      |
+    |  ![fsr mounted uncovered](./Images/trill_fsr_mounted_uncover.png)     |  ![fsr mounted covered by foam sheet](./Images/trill_fsr_mounted_covered.png)      |
 
 
     #### Apply Heat Shrink
@@ -115,13 +119,17 @@
     !!! warning
         Be careful to not cut the touch sensor
 
-    ![heat shrink cut open](#)
+    ![heat shrink cut open](./Images/trill_heatshrink_cutopen.png)
 
     ### Prepare the EnchantiS3 Board
 
-    Use two M3 screws to secure the EnchantiS3 board to the ESP32 endcap. Glue the button in the button slot on the ESP32 bed piece. Cut another 2-Pin JST cable (like the one used for the FSR). Solder the two ends of the JST cable vertically to the button pins. Connect the JST cable from the button to the BTN header on the EnchantiS3 board.
+    Use two M3 screws to secure the EnchantiS3 board to the ESP32 endcap. Glue the button in the button slot on the ESP32 bed piece. Cut another 2-Pin JST cable (like the one used for the FSR). Solder the two ends of the JST cable vertically to the button pins. 
 
-    ![EnchantiS3 Board on the ESP32 bed](#)
+    ![EnchantiS3 assembled button](./Images/trill_assembled_button.png)
+    
+    Connect the JST cable from the button to the BTN header on the EnchantiS3 board.
+
+    ![EnchantiS3 Board on the ESP32 bed](./Images/trill_esp32_bed.png)
 
     ### Final Assembly
 
@@ -130,11 +138,13 @@
     !!! info
         It is really important that there is a strong adhesion when gluing the components together. Use glue designed for the plastic pipe you are using.
 
-    ![Endcap attached to the T-Stick](#)
+    ![Finished T-Stick](./Images/trill_tstick_withendcap.png)
 
     Use M2 screws add the touch door beds to the T-Stick.
 
-    ![Touch door connected to T-Stick](#)
+    ![Touch door connected to T-Stick](./Images/trill_touch_door.png)
+
+    Congratulations you've built your T-Stick!
 
 === "5GW-Enchanti"
 
