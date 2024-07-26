@@ -1,0 +1,2360 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://idmil.github.io/tstick-docs/designs/tstick-4gw/build-guide/">
+      
+      
+        <link rel="prev" href="../specs_4gw_2021/">
+      
+      
+        <link rel="next" href="../flashing-guide/">
+      
+      
+      <link rel="icon" href="../../../Images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>Build Guide - T-Stick Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#building-a-sopranino-t-stick-4gw" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+    This documentation website is still a work in progress. If you experience any broken links, or encounter any spelling errors please add an issue on <a href="https://github.com/IDMIL/tstick-docs">github</a>.
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="T-Stick Docs" class="md-header__button md-logo" aria-label="T-Stick Docs" data-md-component="logo">
+      
+  <img src="../../../Images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            T-Stick Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Build Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8v2m9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.71-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/IDMIL/T-Stick" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    IDMIL/T-Stick
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../getting-started/" class="md-tabs__link">
+          
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../setup/" class="md-tabs__link">
+          
+  
+  Setup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../engineering/design-guidelines/" class="md-tabs__link">
+          
+  
+  Design Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../community/performances/" class="md-tabs__link">
+          
+  
+  Community
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="T-Stick Docs" class="md-nav__button md-logo" aria-label="T-Stick Docs" data-md-component="logo">
+      
+  <img src="../../../Images/logo.png" alt="logo">
+
+    </a>
+    T-Stick Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/IDMIL/T-Stick" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    IDMIL/T-Stick
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started with your T-Stick
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Setup
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Setup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../setup/wireless-settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changing communication protocols
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../setup/advanced-settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changing sensor settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../setup/json-settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Change settings using json file
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Design Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Design Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../engineering/design-guidelines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design Guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../engineering/gestures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T-Stick Gestures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    4th Generation T-Sticks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            4th Generation T-Sticks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3_2" id="__nav_4_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Variants
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Variants
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specs_4gw_2018/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T-Stick 4GW-2018
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specs_4gw_2021/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T-Stick 4GW-2021
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_3_3" id="__nav_4_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Build Guide
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Build Guide
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bill-of-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bill of Materials:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schematic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schematic:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instructions:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#building-the-frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building the Frame:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imu" class="md-nav__link">
+    <span class="md-ellipsis">
+      IMU:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fsr-and-piezo-electronics" class="md-nav__link">
+    <span class="md-ellipsis">
+      FSR and Piezo Electronics:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FSR and Piezo Electronics:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#envelope-follower-circuit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Envelope Follower Circuit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voltage-divider-circuit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voltage Divider Circuit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microcontroller" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microcontroller:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firmware:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      More info:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bill-of-materials_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bill of Materials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instructions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instructions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#printing-the-frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      Printing the Frame
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soldering-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soldering Components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#document-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      Document info
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flashing-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flashing Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connection-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    5th Generation T-Sticks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            5th Generation T-Sticks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tstick-5gw/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../engineering/requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design Requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4_3" id="__nav_4_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Variants
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Variants
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tstick-5gw/specs_5gw_trill/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T-Stick 5GW-Trill
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tstick-5gw/specs_5gw_enchanti/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T-Stick 5GW-Enchanti
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4_4" id="__nav_4_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tstick-5gw/build-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tstick-5gw/flashing-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flashing Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tstick-5gw/connection-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Community
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/performances/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Performances
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/publications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Publications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/contribution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribute to the Docs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bill-of-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bill of Materials:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schematic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schematic:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instructions:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#building-the-frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building the Frame:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imu" class="md-nav__link">
+    <span class="md-ellipsis">
+      IMU:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fsr-and-piezo-electronics" class="md-nav__link">
+    <span class="md-ellipsis">
+      FSR and Piezo Electronics:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FSR and Piezo Electronics:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#envelope-follower-circuit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Envelope Follower Circuit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voltage-divider-circuit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voltage Divider Circuit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microcontroller" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microcontroller:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firmware:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      More info:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bill-of-materials_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bill of Materials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instructions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instructions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#printing-the-frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      Printing the Frame
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soldering-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soldering Components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#document-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      Document info
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="building-a-sopranino-t-stick-4gw">Building a Sopranino T-Stick 4GW</h1>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">4GW-2018</label><label for="__tabbed_1_2">4GW-2021</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<h2 id="bill-of-materials">Bill of Materials:</h2>
+<table>
+<thead>
+<tr>
+<th>Qty</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>sensor</td>
+<td><a href="https://www.cypress.com/le/127221/download">Capsense</a> breakout board (CY8CMBR3116)</td>
+</tr>
+<tr>
+<td>01</td>
+<td>sensor</td>
+<td><a href="https://www.sparkfun.com/products/13284">IMU breakout board LSM9DS</a></td>
+</tr>
+<tr>
+<td>01</td>
+<td>sensor</td>
+<td><a href="https://www.robotshop.com/ca/en/interlink-24-long-fsr.html">FSR 408</a></td>
+</tr>
+<tr>
+<td>01</td>
+<td>sensor</td>
+<td><a href="https://www.digikey.ca/product-detail/en/cui-inc/CEB-20D64/102-1126-ND/412385">buzz elem. piezo STD</a></td>
+</tr>
+<tr>
+<td>01</td>
+<td>electronics</td>
+<td><a href="https://wiki.wemos.cc/products:d32:d32_pro">microcontroller Lolin D32 Pro</a></td>
+</tr>
+<tr>
+<td>01</td>
+<td>electronics</td>
+<td><a href="https://www.digikey.ca/product-detail/en/kemet/C320C104J5R5TA7301/399-9867-1-ND/3726105">0.1uF capacitor</a></td>
+</tr>
+<tr>
+<td>01</td>
+<td>electronics</td>
+<td>1K resistor</td>
+</tr>
+<tr>
+<td>01</td>
+<td>electronics</td>
+<td><a href="https://www.digikey.ca/product-detail/en/CFM12JT10K0/S10KHCT-ND/2617547/?itemSeq=307630589">10K resistor</a></td>
+</tr>
+<tr>
+<td>01</td>
+<td>electronics</td>
+<td><a href="https://www.digikey.ca/product-detail/en/CFM12JT2M00/S2MHCT-ND/2617413/?itemSeq=307631009">2M resistor</a></td>
+</tr>
+<tr>
+<td>01</td>
+<td>electronics</td>
+<td><a href="https://www.digikey.ca/product-detail/en/1N4004-TP/1N4004-TPMSCT-ND/773691/?itemSeq=307634719">Diode 1N4004</a></td>
+</tr>
+<tr>
+<td>01</td>
+<td>electronics</td>
+<td><a href="https://www.digikey.com/products/en?mpart=PV36W103C01B00&amp;v=118">10K potentiometer</a></td>
+</tr>
+<tr>
+<td>01</td>
+<td>electronics</td>
+<td><a href="https://www.digikey.ca/products/en?keywords=296-1395-5-ND">LM358P Opamp</a></td>
+</tr>
+<tr>
+<td>01</td>
+<td>electronics</td>
+<td><a href="https://www.digikey.ca/product-detail/en/c-k/PTS125SM43-2-LFS/CKN9100-ND/1146743">button</a></td>
+</tr>
+<tr>
+<td>02</td>
+<td>electronics</td>
+<td><a href="https://www.aliexpress.com/item/32877217306.html">SH1.0 cables</a></td>
+</tr>
+<tr>
+<td>02</td>
+<td>electronics</td>
+<td><a href="https://www.digikey.ca/product-detail/en/sparkfun-electronics/PRT-08808/1568-1652-ND/7387401">Breadboards</a></td>
+</tr>
+<tr>
+<td>30cm</td>
+<td>manufacturing parts</td>
+<td>PVC Tube split in 2 lenghtwise</td>
+</tr>
+<tr>
+<td>~85cm</td>
+<td>manufacturing parts</td>
+<td>Copper adhesive tape</td>
+</tr>
+<tr>
+<td>01</td>
+<td>manufacturing parts</td>
+<td>Li-Po Battery (min 1000mA)</td>
+</tr>
+<tr>
+<td>01</td>
+<td>manufacturing parts</td>
+<td><a href="https://www.digikey.ca/product-detail/en/RA1113112R/EG5619-ND/3778055/?itemSeq=307636370">ON-OFF rocker switch</a></td>
+</tr>
+<tr>
+<td>~35cm</td>
+<td>manufacturing parts</td>
+<td>Heat shrink tube</td>
+</tr>
+<tr>
+<td>01</td>
+<td>manufacturing parts</td>
+<td>end-cup with microcontroller base</td>
+</tr>
+<tr>
+<td>01</td>
+<td>manufacturing parts</td>
+<td>end-cup with for the ON-OFF switch and hold battery</td>
+</tr>
+<tr>
+<td>02</td>
+<td>manufacturing parts</td>
+<td>3D printed bases for Capsense</td>
+</tr>
+<tr>
+<td>02</td>
+<td>manufacturing parts</td>
+<td><a href="../Images/SopraninoIMUparts.jpg">3D printed bases for IMU</a></td>
+</tr>
+<tr>
+<td>11</td>
+<td>manufacturing parts</td>
+<td><a href="https://www.digikey.ca/product-detail/en/MPMS+002+0008+PH/H739-ND/274950/?itemSeq=307635387">M2 Mounting Screws</a></td>
+</tr>
+<tr>
+<td>11</td>
+<td>manufacturing parts</td>
+<td><a href="https://www.digikey.ca/product-detail/en/MHNZ+002+4/H761-ND/274972/?itemSeq=307635458">M2 bolts</a></td>
+</tr>
+<tr>
+<td>01</td>
+<td>manufacturing parts</td>
+<td><a href="https://www.amazon.ca/Craft-Foam-Sheets-Assorted-Colours/dp/B005EQPRM6">foam sheet</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="schematic">Schematic:</h2>
+<p><img alt="T-Stick Sopranino schematics" src="../Images/Sopranino2GW_schematics.png" title="T-Stick Sopranino schematics" /></p>
+<p>This schematic is outdated. Use for FSR and Piezo Electronics reference only.</p>
+<h2 id="instructions">Instructions:</h2>
+<h4 id="building-the-frame">Building the Frame:</h4>
+<p>Cut the PVC in half as in the picture and tape the conductive tape 1.5cm apart. 
+Length of holes assembly is 1.5 * 15 for 16 strips. That is 22.5cm. You need aprox. 8 cm of copper tape per strip.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Before start assembling the T-Stick, pay attention to the position of the components. Plan yourself to place the components for them to not "overlap" each other (check image below). Also, make sure the cables are long enough to allow the tube and caps to be opened and closed properly.</p>
+</div>
+<p><img alt="building_Sopranino 2nd image" src="../Images/building_Sopranino_2.jpg" title="Building a Sopranino T-Stick" /></p>
+<p>The Capsense (https://www.cypress.com/le/127221/download) breakout boards use 2 3D printed bases. It connects via a jumper cable with SH1.
+connectors to the D32 Pro (https://wiki.wemos.cc/products:d32:d32_pro).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>THE CAPSENSE BOARD HAS THE CONNECTORS LABELED FOR THE MICROCONTROLLER (IN) AND IMU (OUT). BE CAREFUL WHEN CONNECTING THEM BECAUSE OF A LAST MINUTE CHANGE IN THE PINOUT OF THE BOARD. SEE SCHEMATIC BELOW. </p>
+</div>
+<p><strong>The Capsense label for ground and +3V3 is inverted at the end that goes to the IMU. You should connect:</strong></p>
+<p><strong>Capsense -&gt; IMU</strong>
+GND ------&gt; +3V3
+SDA ------&gt; SDA
+SCL ------&gt; SCL
++3V3------&gt; GND</p>
+<p><img alt="Capsense-IMU connection" src="../Images/IMU_connection.jpg" title="Capsense-IMU connection" /></p>
+<p>Please take extra care since it is necessary to cut the cable and solder the right ends at the IMU. </p>
+<p>Also, if you need to extend the length of the SH1.0 cable, <strong>always cut the wire in half and extend using both parts according to the color</strong>. Using two different wires can lead to mistakes since the SH1.0 cable is parallel. <strong>Failing to follow this step can end up burning your ESP32</strong>.</p>
+<p>All the building tools can be found in the Machine Shop at the McGill Music Tech Department.</p>
+<h4 id="imu">IMU:</h4>
+<p>The <a href="https://www.sparkfun.com/products/13284">LSM9DS1</a> IMU connects via another SH1.0 cable to the other socket on the Capsense for I2C communication. One end has the SH housing the other is open to solder onto the IMU breakout board. There are also 2 3D printed bases to attach the IMU to the frame.</p>
+<p><img alt="T-Stick Sopranino IMU parts" src="../Images/SopraninoIMUparts.jpg" title="T-Stick Sopranino IMU parts" /></p>
+<p>The T-Stick Spatial orientation is dened as follows:</p>
+<p><img alt="T-Stick Sopranino orientation" src="../Images/T-Stick-Orientation.png" title="T-Stick Sopranino orientation" /></p>
+<p>Please, install the IMU so that this conguration is kept consistent will the design.</p>
+<h4 id="fsr-and-piezo-electronics">FSR and Piezo Electronics:</h4>
+<p>The Force Sensitive Resistor and the Piezoelectric sensor are glued to the frame with epoxy, superglue, or hot glue. </p>
+<p><img alt="T-Stick Sopranino - piezo placement" src="../Images/piezo_in_place_h.jpg" title="T-Stick Sopranino - piezo placement" /></p>
+<p>The signal processing circuit is all analog and needs to be soldered to a perfboard. The piezoelectric circuit output is to be soldered to pin 32 of the ESP32 and the FSR circuit output to pin 33. Electronic building tools can be found in the Electronics Shop at the McGill Music Tech Department. Solder long cables to the FSR pins.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The FSR pins are very delicate. Put some heat shrink tube to reinforce the end of the fsr so it doesn’t break. If it breaks, it’s not repairable.</p>
+</div>
+<p>Here’s the pinout for the LM358 opamp you will be using in the above circuit:</p>
+<div class="highlight"><pre><span></span><code>                    +--()--+
+            Output A | 1   8| V+
+    Inverting Input A | 2   7| Output B
+Non-Inverting Input A | 3   6| Inverting Input B
+                GND | 4   5| Non-Inverting Input B
+                    +------+
+</code></pre></div>
+<p><strong>OBS</strong>: Don't forget to connect GND and V+.</p>
+<h5 id="envelope-follower-circuit">Envelope Follower Circuit</h5>
+<p><img alt="T-Stick Sopranino - Envelope Follower Circuit" src="../Images/envelope_follower.png" title="T-Stick Sopranino - Envelope Follower Circuit" /></p>
+<h5 id="voltage-divider-circuit">Voltage Divider Circuit</h5>
+<p><img alt="T-Stick Sopranino - Voltage Divider Circuit" src="../Images/voltage_divider.png" title="T-Stick Sopranino - Envelope Voltage Divider" /></p>
+<h4 id="microcontroller">Microcontroller:</h4>
+<p>The microcontroller to be used with the T-Stick is the Lolin D32 PRO. You can check the tech specs at https://wiki.wemos.cc/products:d32:d32_pro.</p>
+<h4 id="firmware">Firmware:</h4>
+<p>Instructions to upload (flash) the T-Stick firmware and configuration files can be found <a href="../flashing-guide/">here</a>.</p>
+<p>Read and follow <strong>ALL</strong> the instructions at before upload it to the board. There are some steps to prepare your machine and the ESP32 before flash it for the first time.</p>
+<p>It is recommended to use the board test firmwares located at https://github.com/IDMIL/TStick/tree/master/Sopranino/2GW/19X/Tests to test the capsense board and the IMU after install them.</p>
+<p>Nightly builds and beta firmwares can be downloaded at https://github.com/IDMIL/TStick. Before using them, contact the IDMIL's lab team.</p>
+<h2 id="more-info">More info:</h2>
+<p>Version 1.1: Edu Meneses - eduardo.meneses@mail.mcgill.ca\
+Version 1.0: Created by: Alex Nieva - alex.nieva@mail.mcgill.ca</p>
+</div>
+<div class="tabbed-block">
+<h2 id="bill-of-materials_1">Bill of Materials</h2>
+<table>
+<thead>
+<tr>
+<th>Qty</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td><a href="https://shop.bela.io/products/trill-craft/">Trill</a></td>
+</tr>
+<tr>
+<td>01</td>
+<td><a href="https://www.adafruit.com/product/4335">TinyPICO</a></td>
+</tr>
+<tr>
+<td>01</td>
+<td><a href="https://www.sparkfun.com/products/13284">IMU breakout board LSM9DS</a></td>
+</tr>
+<tr>
+<td>01</td>
+<td><a href="https://www.robotshop.com/ca/en/interlink-24-long-fsr.html">FSR 408</a></td>
+</tr>
+<tr>
+<td>01</td>
+<td>1K resistor</td>
+</tr>
+<tr>
+<td>01</td>
+<td><a href="https://www.digikey.com/products/en?mpart=PV36W103C01B00&amp;v=118">10K potentiometer</a></td>
+</tr>
+<tr>
+<td>01</td>
+<td><a href="https://www.digikey.ca/product-detail/en/c-k/PTS125SM43-2-LFS/CKN9100-ND/1146743">button</a></td>
+</tr>
+<tr>
+<td>01</td>
+<td>Li-Po Battery min 1000mA</td>
+</tr>
+<tr>
+<td>01</td>
+<td>PVC Tube (30 cm)</td>
+</tr>
+<tr>
+<td>\~85cm</td>
+<td>Copper adhesive tape</td>
+</tr>
+<tr>
+<td>01</td>
+<td><a href="https://www.digikey.ca/product-detail/en/RA1113112R/EG5619-ND/3778055/?itemSeq=307636370">ON-OFF rocker switch</a></td>
+</tr>
+<tr>
+<td>\~35cm</td>
+<td>Heat shrink tube</td>
+</tr>
+<tr>
+<td>01</td>
+<td>end-cup with microcontroller base</td>
+</tr>
+<tr>
+<td>01</td>
+<td>end-cup with for the ON-OFF switch</td>
+</tr>
+<tr>
+<td>01</td>
+<td><a href="https://github.com/IDMIL/T-Stick/tree/main/3D_printing">3D printed bases</a>, one of each file, and 4 regular poles</td>
+</tr>
+<tr>
+<td>11</td>
+<td><a href="https://www.digikey.ca/product-detail/en/MPMS+002+0008+PH/H739-ND/274950/?itemSeq=307635387">M2 Mounting Screws</a></td>
+</tr>
+<tr>
+<td>01</td>
+<td><a href="https://www.amazon.ca/Craft-Foam-Sheets-Assorted-Colours/dp/B005EQPRM6">foam sheet</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="instructions_1">Instructions</h2>
+<h3 id="printing-the-frame">Printing the Frame</h3>
+<p>Print one of each of the <a href="https://github.com/IDMIL/T-Stick/tree/main/3D_printing">3d printing files</a>, but print 4 copies of the "regular poles". The beds (pieces that snap together) will need supports on the piece that snaps.</p>
+<p><img alt="Overview" src="../Images/overview.png" /></p>
+<p>Snap the beds together as in the image above, snapping the regular poles between beds to secure them. Place copper strips on each arc in the beds, these will be used for capacitive touch sensing.</p>
+<h3 id="soldering-components">Soldering Components</h3>
+<p>All the building tools can be found in the Machine Shop at the McGill Music Tech Department.</p>
+<p><img alt="Overview with wires" src="../Images/overview-wires.png" /></p>
+<p>Let's start with the end cap where the TinyPICO will be inserted. Insert the button into the slot like the pictures below.</p>
+<table>
+<thead>
+<tr>
+<th>button top view</th>
+<th>button bottom view</th>
+<th>soldering</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="button top view" src="../Images/button-top.png" /></td>
+<td><img alt="button bottom view" src="../Images/button-bottom.png" /></td>
+<td><img alt="button soldering" src="../Images/button-soldering.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>Solder 2 wires diagonally to the button pins, connecting one to GND and one to pin 15 on the TinyPICO. For the GND connection, twist an extra wire together before soldering to the TinyPICO, which will be used for connecting the IMU later on.</p>
+<table>
+<thead>
+<tr>
+<th>connecting to TinyPICO</th>
+<th>completed button circuit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="connecting to TinyPico" src="../Images/connecting-tinypico.png" /></td>
+<td><img alt="" src="../Images/button-completecircuit.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>To prepare the resistor for its FSR connection, solder 2 wires to one end and 1 to the other like below. Use heat shrink to wrap the connection. Solder the single end wire to a GND pin on the button. Solder one of the double end wires to pin 33 on the TinyPICO.</p>
+<table>
+<thead>
+<tr>
+<th>soldering</th>
+<th>heat shrinking</th>
+<th>connecting to TinyPICO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="soldering two wires" src="../Images/fsr-twowire.png" /></td>
+<td><img alt="heat shrinking" src="../Images/heatshrink-fsrtwowire.png" /></td>
+<td><img alt="connecting to tinypico FSR" src="../Images/fsr-tinypico.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>Prepare the FSR connections by carefully soldering 2 wires to its terminals, using the extra wire form the resistor as one of the terminals. Be cautious not to melt the plastic on the FSR if possible by soldering quickly. Heat shrink the terminals when complete.</p>
+<table>
+<thead>
+<tr>
+<th>soldering</th>
+<th>heat shrinking</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="soldering wire to FSR" src="../Images/fsr-soldering.png" /></td>
+<td><img alt="heat shrinking on fsr" src="../Images/fsr-heatshrink.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>Solder the other FSR wire <strong>and</strong> another wire (which will connect to the IMU) to the 3V3 pin on the TinyPICO (yellow and orange in the picture below). Twisting the 2 wires together before inserting into the pin will make this task easier.</p>
+<table>
+<thead>
+<tr>
+<th>twisting and soldering</th>
+<th>view of 3V3 pin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="twisting 3v3 wire" src="../Images/wire-twisted.png" /></td>
+<td><img alt="view of 3v3 wire" src="../Images/wire-twisted-view2.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>Solder 2 wires to each of the IMU's GND, VCC, SDA and SCL pins. One of the VCC wires and one of the GND wires should be the extra 3V3 and GND wires from the TinyPICO that you put in in the above steps. Connect one of the SDA wires to pin 21 of the TinyPICO, and one of the SCL wires to pin 22 of the TinyPICO.</p>
+<table>
+<thead>
+<tr>
+<th>twisting and soldering</th>
+<th>connecting to TinyPICO</th>
+<th>imu wiring</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="imu wiring" src="../Images/imu-wiring.png" /></td>
+<td><img alt="imu wiring to tinypico" src="../Images/imu-tinypico.png" /></td>
+<td><img alt="imu wiring alternative wiring" src="../Images/imu-wiring-topview.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>At this stage, the IMU should have unconnected wires (1 of each) from SDA, SCL, GND and VCC. Run the 4 unconnected wires through the pole and solder to the corresponding labeled pins on the Trill.</p>
+<table>
+<thead>
+<tr>
+<th>trill connections</th>
+<th>alternate view</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="trill connections" src="../Images/trill-wiring.png" /></td>
+<td><img alt="trill connections alternate view" src="../Images/trill-wiring2.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>Now for the fun part ;). Solder wires onto each of the 15 copper strips, running them through the poles to the Trill board when necessary. When cutting wires for this part, allow enough length to get to the Trill, but not too long to clutter the internals. Solder the other ends of the wires <strong>in order</strong> from pico towards the end cap to pins 0-15 on the Trill board.</p>
+<table>
+<thead>
+<tr>
+<th>copper soldering</th>
+<th>alternate view</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="copper soldering" src="../Images/copper-soldering.png" /></td>
+<td><img alt="alternate view" src="../Images/copper-soldering2.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>Connect long wires from the 5V and GND pins of the TinyPICO (for the battery), and run them through the poles to the other end. Mount the IMU and Trill boards to their beds, and insert the TinyPICO into its slot in the end cap with the button. Slide the entire frame with the button cap into the PVC, making sure the long power wires can be accessed from the open end. Attach the FSR to the outside of the PVC, cutting the end if it's too long. Use the end cap's slot for the FSR wires to come out of the frame.</p>
+<p><strong>IMU Mounting Note:</strong> Please install the IMU so that this configuration is kept consistent will the design. </p>
+<p><img alt="T-Stick Sopranino orientation" src="../Images/orientation.png" /></p>
+<p><img alt="T-Stick inserted in pipe" src="../Images/tstick-insert.png" /> </p>
+<p>Insert the power switch into the other end cap. Solder the power wire of the battery to the power switch as in the picture below, twisting together the long power wire from the TinyPICO sticking out the end. Solder the long GND wire to the battery's GND.</p>
+<p><strong>Important Note</strong>: 2nd picture below should have ran the wires through the poles and inserted into the frame before soldering to the TinyPICO, be sure to do this before soldering the battery to the TinyPICO.</p>
+<table>
+<thead>
+<tr>
+<th>power soldering</th>
+<th>power circuit view</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="on/off circuit wiring" src="../Images/power-circuit.png" /></td>
+<td><img alt="power circuit alternate view" src="../Images/powercircuit-overview.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>Hooray, you built a T-Stick!</p>
+<h3 id="document-info">Document info</h3>
+<ul>
+<li>Version 1.2: Brady Boettcher</li>
+<li>Version 1.1: Edu Meneses - eduardo.meneses@mail.mcgill.ca</li>
+<li>Version 1.0: Alex Nieva - alex.nieva@mail.mcgill.ca</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 26, 2024</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 26, 2024</span>
+  </span>
+
+    
+    
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Contributors">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/></svg>
+      
+    </span>
+    <nav>
+      
+        <a href="mailto:32888184+aburt2@users.noreply.github.com">aburt2</a>
+    </nav>
+  </span>
+
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../specs_4gw_2021/" class="md-footer__link md-footer__link--prev" aria-label="Previous: T-Stick 4GW-2021">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                T-Stick 4GW-2021
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../flashing-guide/" class="md-footer__link md-footer__link--next" aria-label="Next: Flashing Guide">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Flashing Guide
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2018 - 2024 Input Devices and Music Interaction Laboratory, Schulich School of Music, McGill University
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.footer", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../../javascripts/tablesort.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
