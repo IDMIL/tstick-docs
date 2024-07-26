@@ -73,12 +73,9 @@ nav:
     - Changing communication protocols: setup/wireless-settings.md
     - Changing sensor settings: setup/advanced-settings.md
     - Change settings using json file: setup/json-settings.md
-  - Technical Documentation:
-    - T-Stick Design Guidelines: engineering/design-guidelines.md
-    - T-Stick 5GW Design Requirements: engineering/requirements.md
-    - T-Stick 4GW/5GW Functions: engineering/functions.md
-    - T-Stick Gestures: engineering/gestures.md
   - Design Documentation:
+    - Design Guidelines: engineering/design-guidelines.md
+    - T-Stick Gestures: engineering/gestures.md
     - 4th Generation T-Sticks:
       - designs/tstick-4gw/index.md 
       - Variants:
@@ -90,6 +87,7 @@ nav:
         - Connecting Guide: designs/tstick-4gw/connection-guide.md
     - 5th Generation T-Sticks: 
       - designs/tstick-5gw/index.md
+      - Design Requirements: engineering/requirements.md
       - Variants:
         - T-Stick 5GW-Trill: designs/tstick-5gw/specs_5gw_trill.md
         - T-Stick 5GW-Enchanti: designs/tstick-5gw/specs_5gw_enchanti.md
